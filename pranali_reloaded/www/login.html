@@ -8,7 +8,7 @@
 
 {% block page_content %}
 
-<!-- <div class="container"> -->
+<body style="background-image: url(assets/pranali_reloaded/images/galaxy.jpg);">
 	<noscript>
 		<div class="text-center my-5">
 			<h4>{{ _("Javascript is disabled on your browser") }}</h4>
@@ -16,19 +16,25 @@
 				{{ _("You need to enable JavaScript for your app to work.") }}<br>{{ _("To enable it follow the instructions in the following link: {0}").format("<a href='https://enable-javascript.com/'>enable-javascript.com</a></p>") }}
 		</div>
 	</noscript>
-	<img class="wave" src="assets/pranali_reloaded/images/cranberry-wave.png">
-	<img class="wave2" src="assets/pranali_reloaded/images/cranberry-wave.png">
+
+	<!-- <img class="galaxy" src="assets/pranali_reloaded/images/galaxy.jpg"> -->
+	<!-- <img class="wave2" src="assets/pranali_reloaded/images/cranberry-wave.png"> -->
 	<div class="container-new">
-	<div class="img">
+	<!-- <div class="img">
 		<img src="assets/pranali_reloaded/images/pranali_boy.png">
-	</div>
+	</div> -->
 	<div class="login-content">
 		<section class='for-login'>
 			<div class="login-content page-card">
 				<form class="form-signin form-login" role="form">
-					<img src="assets/pranali_reloaded/images/logo.png">
-
+					<img src="assets/pranali_reloaded/images/Rotaract.png">
+					<div class="page-card-head">
+						<span class="indicator blue" data-text="{{ _('Login') }}"></span>
+					</div>
 					<div class="input-div one">
+						<!-- <div class="i">
+							<i class="fa fa-user"></i>
+						</div> -->
 						<div class="div">
 							<input type="text" id="login_email" class="form-control"
 								placeholder="{% if login_name_placeholder %}{{ login_name_placeholder  }}{% else %}{{ _('Email Address') }}{% endif %}"
@@ -57,8 +63,8 @@
 				<p class="text-center sign-up-message">
 					<a href="/registrations" style="margin-top: -2px;">{{ _("Register") }}</a>
 					</p>
-					</div>
 				</div>
+			</div>
 
 				<div class='social-logins' style="margin-top: 5px;">
 					{%- if social_login -%}
@@ -77,7 +83,7 @@
 		<section class='for-signup' style="display: none;">
 			<div class="login-content page-card" style="margin-top: 20px;">
 				<form class="form-signin form-signup hide" role="form">
-					<img src="assets/pranali_reloaded/images/pranali.png">
+					<img src="assets/pranali_reloaded/images/Rotaract.png">
 					<div class="page-card-head">
 						<span class="indicator blue" data-text="{{ _('Sign Up') }}"></span>
 					</div>
@@ -134,9 +140,9 @@
 		</section>
 	</div>
 </div>
-<!-- </div> -->
 
 
+</body>
 {% endblock %}
 
 {% block script %}
