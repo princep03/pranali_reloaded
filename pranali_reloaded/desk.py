@@ -13,9 +13,8 @@ from frappe import _
 @frappe.whitelist()
 def set_desktop_icons():
 	desktop = {
-		"Administration": [
+		"Club Administration": [
 			{
-				"category": "Administration",
 				"label": _('Club'),
 				"icon": "octicon octicon-home",
 				"type": 'doctype',
@@ -23,31 +22,43 @@ def set_desktop_icons():
 				"link": '#List/Club/List'
 			},
 			{
-				"category": "Administration",
 				"label": _('Member'),
-				"icon": "octicon octicon-organization",
+				"icon": "octicon octicon-person",
 				"type": 'doctype',
 				"name": 'Member',
 				"link": '#List/Member/List'
 			},
 			{
-				"category": "Administration",
+				"label": _('OCV'),
+				"icon": "octicon octicon-book",
+				"type": 'doctype',
+				"name": 'OCV',
+				"link": '#List/OCV/List'
+			},
+			{
+				"label": _('District Payments'),
+				"icon": "octicon octicon-mail",
+				"type": 'doctype',
+				"name": 'District Payments',
+				"link": '#List/District Payments/List'
+			},
+			{
 				"label": _('Receipt'),
-				"icon": "octicon octicon-gist-secret",
+				"icon": "octicon octicon-clippy",
 				"type": 'doctype',
 				"name": 'Receipt',
 				"link": '#List/Receipt/List'
-			},
+			}
+		],
+		"Reporting": [
 			{
-				"category": "Administration",
 				"label": _('Project'),
-				"icon": "octicon octicon-rocket",
+				"icon": "octicon octicon-checklist",
 				"type": 'doctype',
 				"name": 'Project',
 				"link": '#List/Project/List'
 			},
 			{
-				"category": "Administration",
 				"label": _('Meeting'),
 				"icon": "octicon octicon-briefcase",
 				"type": 'doctype',
@@ -55,7 +66,6 @@ def set_desktop_icons():
 				"link": '#List/Meeting/List'
 			},
 			{
-				"category": "Administration",
 				"label": _('Ambassadorial Report'),
 				"icon": "octicon octicon-globe",
 				"type": 'doctype',
@@ -63,7 +73,23 @@ def set_desktop_icons():
 				"link": '#List/Ambassadorial Report/List'
 			},
 			{
+				"label": _('PIS Interaction'),
+				"icon": "octicon octicon-organization",
+				"type": 'doctype',
+				"name": 'PIS Interaction',
+				"link": '#List/PIS Interaction/List'
+			},
+			{
 				"category": "Administration",
+				"label": _('AARA Nomination'),
+				"icon": "octicon octicon-gift",
+				"type": 'doctype',
+				"name": 'AARA Nomination',
+				"link": '#List/AARA Nomination/List'
+			}
+		],
+		"Tools": [
+			{
 				"label": _('District E-Directory'),
 				"icon": "octicon octicon-file-submodule",
 				"type": 'query-report',
@@ -71,19 +97,44 @@ def set_desktop_icons():
 				"link": '#query-report/Directory'
 			},
 			{
-				"category": "Administration",
-				"label": _('Pay Dues Online'),
-				"icon": "octicon octicon-credit-card",
-				"link": '/pay',
+				"label": _('Insight Engine'),
+				"icon": "octicon octicon-light-bulb",
+				"type": 'page',
+				"name": 'Insight Engine',
+				"link": '#insight-engine'
 			},
 			{
-				"category": "Administration",
-				"label": _('Pranali User Registration'),
-				"icon": "octicon octicon-organization",
+				"label": _('Dashboard'),
+				"name": 'Dashboard',
+				"icon": "octicon octicon-graph",
+				"type": "link",
+				"link": "#dashboard",
+			},
+			{
+				"label": _('Event Calendar'),
+				"icon": "octicon octicon-calendar",
 				"type": 'doctype',
-				"name": 'Registrations',
-				"link": '#List/Registrations/List'
-			}
+				"name": 'Event Calendar',
+				"link": '#List/Event/Calendar/Default'
+			},
+			{
+				"label": _('Leaderboard'),
+				"icon": "octicon octicon-star",
+				"type": 'page',
+				"name": 'Leaderboard',
+				"link": '#social/users'
+			},
+			{
+				"label": _('Social Wall'),
+				"icon": "octicon octicon-thumbsup",
+				"type": 'page',
+				"name": 'Social',
+				"link": '#social/home'
+			}	
 		]
 	}
+	hook_icons = frappe.get_hooks("icons")
+	for icon in hook_icons:
+		 desktop.get(icon.get('module')).append(icon)
+
 	return desktop

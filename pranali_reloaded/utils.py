@@ -1,6 +1,13 @@
 from __future__ import unicode_literals
 import frappe
 
+def welcome_email():
+	subject = frappe.db.get_single_value("Pranali Settings", "welcome_email_subject")
+	if subject:
+		return subject
+	else:
+		return "Welcome to Pranali"
+
 @frappe.whitelist(allow_guest=True)
 def login_as(user):
 	# only these roles allowed to use this feature
@@ -20,3 +27,12 @@ def login_as(user):
 		return True
 
 	return False
+
+def set_energy_points(user, points, reference_doctype, reference_name):
+	log = frappe.new_doc("Energy Point Log")
+	log.update({
+		"user": user,
+		"points": points,
+		"reference_doctype": reference_doctype,
+		"reference_name": reference_name
+	})

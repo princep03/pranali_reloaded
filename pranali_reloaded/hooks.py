@@ -7,34 +7,48 @@ app_color = "grey"
 app_email = "neil@rotaractsuncity.in"
 app_version = "0.0.1"
 
-doctype_js = {
-	"User": "public/js/user.js"
-}
+welcome_email = "pranali_reloaded.utils.welcome_email"
+boot_session = "pranali_reloaded.boot.set_rotaract_year"
 
-app_include_js = ["/assets/pranali_reloaded/js/desk_common.js"]
+app_include_js = [
+	"/assets/pranali_reloaded/js/desk_common.js",
+	"/assets/js/pranali_desk.js"
+]
 
-app_logo_url = "/assets/pranali_reloaded/img/rotary-wheel.png"
+app_include_css = [
+	"/assets/pranali_reloaded/css/pranali_reloaded.css",
+	"/assets/pranali_reloaded/css/desk.css"
+]
+
+app_logo_url = "/assets/pranali_reloaded/images/rotary-wheel.png"
+brand_html = "Pranali"
 
 website_context = {
-	"favicon": "/assets/pranali_reloaded/img/rotary-wheel.png",
-	"splash_image": "/assets/pranali_reloaded/img/rotary-wheel.png",
+	"favicon": "/assets/pranali_reloaded/images/rotary-wheel.png",
+	"splash_image": "/assets/pranali_reloaded/images/rotary-wheel.png",
 }
 
 override_whitelisted_methods = {
  	"frappe.desk.moduleview.get_desktop_settings": "pranali_reloaded.desk.set_desktop_icons"
 }
 
-# Document Events
-# ---------------
-# Hook on document methods and events
-
 doc_events = {
  	"User": {
- 		"validate": "pranali_reloaded.hook_events.user.set_user_permissions_for_dcm"
+ 		"validate": "pranali_reloaded.hook_events.user.set_user_permissions_for_dcm",
+		 "after_insert": "pranali_reloaded.hook_events.user.set_user_permissions_for_dcm"
 	}
 }
 
-app_include_css = "/assets/pranali_reloaded/css/pranali_reloaded.css"
+doctype_js = {
+	"User": "public/js/user.js",
+	"Event": "public/js/event.js"
+}
+
+scheduler_events = {
+ 	"daily": [
+ 		"pranali_reloaded.scheduler.check_membership"
+ 	]
+}
 
 # Includes in <head>
 # ------------------

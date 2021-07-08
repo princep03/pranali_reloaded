@@ -1,0 +1,112 @@
+{
+ "autoname": "AARA.#####",
+ "creation": "2016-12-01 10:29:29.713223",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "club",
+  "column_break_2",
+  "quarter",
+  "rotaract_year",
+  "section_break_4",
+  "projects",
+  "yearly_nomination",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "club",
+   "fieldtype": "Link",
+   "label": "Club",
+   "options": "Club",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "quarter",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Quarter",
+   "options": "\nOne\nTwo\nThree\nFour\nYearly",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval: doc.quarter!='Yearly'",
+   "fieldname": "projects",
+   "fieldtype": "Table",
+   "label": "Projects",
+   "options": "AARA Nomination Project"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "AARA Nomination",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "rotaract_year",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Rotaract Year",
+   "options": "Rotaract Year",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval: doc.quarter=='Yearly'",
+   "fieldname": "yearly_nomination",
+   "fieldtype": "Table",
+   "label": "Yearly Nomination",
+   "options": "Yearly Nomination"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "modified": "2021-05-26 12:04:12.586406",
+ "modified_by": "Administrator",
+ "module": "Pranali Reloaded",
+ "name": "AARA Nomination",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "presec",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "club"
+}

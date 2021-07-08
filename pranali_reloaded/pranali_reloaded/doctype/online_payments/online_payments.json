@@ -7,6 +7,8 @@
  "field_order": [
   "club",
   "amount",
+  "convenience_fee",
+  "grand_total",
   "paid"
  ],
  "fields": [
@@ -29,10 +31,23 @@
    "default": "0",
    "fieldname": "paid",
    "fieldtype": "Check",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Paid"
+  },
+  {
+   "fieldname": "grand_total",
+   "fieldtype": "Currency",
+   "label": "Grand Total"
+  },
+  {
+   "fieldname": "convenience_fee",
+   "fieldtype": "Int",
+   "label": "Convenience Fee"
   }
  ],
- "modified": "2019-08-21 14:19:46.336722",
+ "index_web_pages_for_search": 1,
+ "modified": "2021-07-04 17:41:11.523087",
  "modified_by": "Administrator",
  "module": "Pranali Reloaded",
  "name": "Online Payments",

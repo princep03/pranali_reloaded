@@ -2,6 +2,7 @@
  "autoname": "MEET.######",
  "creation": "2015-04-17 18:46:12.357408",
  "doctype": "DocType",
+ "engine": "InnoDB",
  "field_order": [
   "date",
   "start_time",
@@ -12,17 +13,22 @@
   "reporting_month",
   "section_break_5",
   "minutes",
-  "section_break_2",
+  "attendance_section",
   "home_club",
+  "district_council_members",
   "rotarians",
   "guest",
+  "percentage_attendance",
   "column_break_10",
-  "other_club",
   "alumini",
+  "other_club",
   "pis",
   "total",
+  "total_registered_members",
+  "total_registered_board_of_directors",
   "section_break_4",
   "club",
+  "rotaract_year",
   "column_break_4",
   "zone",
   "section_break_6",
@@ -50,7 +56,7 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Type of meeting",
-   "options": "GBM\nBOD Meet\nJoint Meet\nOCV\nAny Other"
+   "options": "GBM\nBOD Meet\nJoint Meet\nPIS Interaction\nOCV\nAny Other"
   },
   {
    "fieldname": "column_break_3",
@@ -86,11 +92,6 @@
    "fieldtype": "Text Editor",
    "label": "Minutes",
    "reqd": 1
-  },
-  {
-   "fieldname": "section_break_2",
-   "fieldtype": "Section Break",
-   "label": "Attendence"
   },
   {
    "fieldname": "home_club",
@@ -179,10 +180,51 @@
    "options": "Meeting",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "district_council_members",
+   "fieldtype": "Int",
+   "label": "District Council Members"
+  },
+  {
+   "fieldname": "attendance_section",
+   "fieldtype": "Section Break",
+   "label": "Attendance"
+  },
+  {
+   "fieldname": "rotaract_year",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Rotaract Year",
+   "options": "Rotaract Year",
+   "read_only": 1
+  },
+  {
+   "fieldname": "percentage_attendance",
+   "fieldtype": "Percent",
+   "label": "Percentage Attendance",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.type_of_meeting != \"BOD Meet\"",
+   "fetch_from": "club.members_registered",
+   "fieldname": "total_registered_members",
+   "fieldtype": "Data",
+   "label": "Total Registered Members",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.type_of_meeting == \"BOD Meet\"",
+   "fetch_from": "club.board_of_directors",
+   "fieldname": "total_registered_board_of_directors",
+   "fieldtype": "Int",
+   "label": "Total Registered Board of Directors",
+   "read_only": 1
   }
  ],
+ "index_web_pages_for_search": 1,
  "is_submittable": 1,
- "modified": "2019-08-20 16:08:29.644355",
+ "modified": "2021-05-30 20:52:48.776218",
  "modified_by": "Administrator",
  "module": "Pranali Reloaded",
  "name": "Meeting",
@@ -204,7 +246,7 @@
   },
   {
    "read": 1,
-   "role": "DCM",
+   "role": "District Council Member",
    "set_user_permissions": 1
   },
   {
@@ -216,9 +258,20 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "presec",
+   "role": "Club Member - Full Access",
    "set_user_permissions": 1,
    "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Club Member - Limited Access",
+   "share": 1,
    "write": 1
   }
  ],

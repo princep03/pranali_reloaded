@@ -1,0 +1,82 @@
+{
+ "autoname": "field:avenue",
+ "creation": "2020-06-28 21:38:51.355130",
+ "doctype": "DocType",
+ "document_type": "Setup",
+ "engine": "InnoDB",
+ "field_order": [
+  "avenue",
+  "nominations_per_quarter",
+  "main_avenue"
+ ],
+ "fields": [
+  {
+   "fieldname": "avenue",
+   "fieldtype": "Data",
+   "label": "Avenue",
+   "unique": 1
+  },
+  {
+   "fieldname": "nominations_per_quarter",
+   "fieldtype": "Int",
+   "label": "Nominations per quarter"
+  },
+  {
+   "default": "0",
+   "fieldname": "main_avenue",
+   "fieldtype": "Check",
+   "label": "Main Avenue"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "modified": "2021-05-23 13:41:13.170415",
+ "modified_by": "Administrator",
+ "module": "Pranali Reloaded",
+ "name": "Avenue",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Club Member - Full Access"
+  },
+  {
+   "read": 1,
+   "role": "District Council Member"
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Club Member - Limited Access",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

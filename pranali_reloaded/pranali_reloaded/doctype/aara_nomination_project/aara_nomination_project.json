@@ -1,0 +1,67 @@
+{
+ "creation": "2016-12-05 11:55:35.180136",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "project",
+  "project_name",
+  "column_break_2",
+  "nominate_for",
+  "avenue"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Project",
+   "options": "Project",
+   "reqd": 1
+  },
+  {
+   "columns": 3,
+   "fetch_from": "project.project_name",
+   "fieldname": "project_name",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Project Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 2,
+   "fieldname": "nominate_for",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Nominate for",
+   "options": "\nAvenue 1\nAvenue 2\nJoint",
+   "reqd": 1
+  },
+  {
+   "columns": 3,
+   "fieldname": "avenue",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nomination Avenue",
+   "read_only": 1,
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "modified": "2021-05-26 17:53:21.731226",
+ "modified_by": "Administrator",
+ "module": "Pranali Reloaded",
+ "name": "AARA Nomination Project",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

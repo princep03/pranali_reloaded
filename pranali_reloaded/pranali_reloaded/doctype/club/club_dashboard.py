@@ -6,10 +6,12 @@ def get_data():
 		'fieldname': 'club',
 		'transactions': [
 			{
+				'label': 'Activities',
 				'items': ['Meeting', 'Project', 'Ambassadorial Report']
 			},
 			{
-				'items': ['Receipt', 'Member']
+				'label': 'Entity',
+				'items': ['Receipt', 'District Payments', 'Member', 'Membership']
 			}
 		]
 	}

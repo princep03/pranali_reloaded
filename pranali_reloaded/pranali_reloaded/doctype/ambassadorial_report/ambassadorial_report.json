@@ -2,9 +2,10 @@
  "autoname": "AM.######",
  "creation": "2015-06-02 11:06:33.017061",
  "doctype": "DocType",
+ "engine": "InnoDB",
  "field_order": [
   "project_of",
-  "name_of_the_club",
+  "club_district_details",
   "column_break_2",
   "project_name",
   "section_break_6",
@@ -12,9 +13,10 @@
   "section_break_4",
   "time_stamp",
   "column_break_8",
-  "total_attendence",
+  "total_attendance",
   "section_break_8",
   "club",
+  "rotaract_year",
   "column_break_12",
   "zone",
   "document_status",
@@ -24,16 +26,11 @@
   {
    "fieldname": "project_of",
    "fieldtype": "Link",
+   "ignore_user_permissions": 1,
    "in_standard_filter": 1,
    "label": "Project of ",
-   "options": "Club List",
+   "options": "Club",
    "reqd": 1
-  },
-  {
-   "depends_on": "eval:doc.project_of==\"Others\"",
-   "fieldname": "name_of_the_club",
-   "fieldtype": "Data",
-   "label": "Name of the Club"
   },
   {
    "fieldname": "column_break_2",
@@ -70,12 +67,6 @@
   {
    "fieldname": "column_break_8",
    "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "total_attendence",
-   "fieldtype": "Int",
-   "in_list_view": 1,
-   "label": "Total Attendence"
   },
   {
    "fieldname": "section_break_8",
@@ -116,10 +107,31 @@
    "options": "Ambassadorial Report",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "total_attendance",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Total Attendance"
+  },
+  {
+   "depends_on": "eval:doc.project_of==\"Other\"",
+   "fieldname": "club_district_details",
+   "fieldtype": "Data",
+   "label": "Club/District Details"
+  },
+  {
+   "fieldname": "rotaract_year",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Rotaract Year",
+   "options": "Rotaract Year",
+   "read_only": 1
   }
  ],
+ "index_web_pages_for_search": 1,
  "is_submittable": 1,
- "modified": "2019-08-20 16:09:15.317522",
+ "modified": "2021-04-26 00:20:25.272727",
  "modified_by": "Administrator",
  "module": "Pranali Reloaded",
  "name": "Ambassadorial Report",
@@ -147,14 +159,23 @@
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "presec",
-   "share": 1,
+   "role": "Club Member - Full Access",
    "submit": 1,
    "write": 1
   },
   {
    "read": 1,
-   "role": "DCM"
+   "role": "District Council Member"
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Club Member - Limited Access",
+   "write": 1
   }
  ],
  "sort_field": "modified",

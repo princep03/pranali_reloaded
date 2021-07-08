@@ -4,21 +4,34 @@
  "creation": "2015-03-17 17:58:07.920205",
  "doctype": "DocType",
  "document_type": "Setup",
+ "engine": "InnoDB",
  "field_order": [
+  "member_details_section",
   "member_name",
   "dob",
-  "column_break_4",
-  "gender",
+  "column_break_5",
   "status",
-  "image",
-  "section_break_5",
-  "contact_number",
-  "column_break_7",
-  "email",
-  "section_break_12",
   "designation",
-  "column_break_14",
+  "section_break_5",
+  "gender",
+  "contact_number",
+  "email",
+  "column_break_4",
+  "address",
+  "membership_details_section",
+  "column_break_7",
+  "membership_valid_till",
+  "dues_paid",
   "in_directory",
+  "column_break_19",
+  "verification_hash",
+  "qr_code",
+  "image",
+  "section_break_15",
+  "enable_pranali_access",
+  "limited_access",
+  "column_break_18",
+  "user",
   "section_break_10",
   "club",
   "column_break_16",
@@ -32,8 +45,7 @@
    "in_standard_filter": 1,
    "label": "Member Name",
    "reqd": 1,
-   "search_index": 1,
-   "set_only_once": 1
+   "search_index": 1
   },
   {
    "fieldname": "dob",
@@ -46,21 +58,15 @@
   },
   {
    "fieldname": "gender",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "label": "Gender",
-   "options": "Male\nFemale\nOther"
+   "options": "Gender"
   },
   {
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
    "options": "Active Rotaractor\nGuest\nAlumni\nLeft Club\nTerminated"
-  },
-  {
-   "fieldname": "image",
-   "fieldtype": "Attach Image",
-   "hidden": 1,
-   "label": "Image"
   },
   {
    "fieldname": "section_break_5",
@@ -85,18 +91,10 @@
    "label": "E-mail"
   },
   {
-   "fieldname": "section_break_12",
-   "fieldtype": "Section Break"
-  },
-  {
    "fieldname": "designation",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "label": "Designation",
-   "options": "Member\nPresident\nIPP\nVice - President\nSecretary\nJoint - Secretary\nDirector - Finance\nJoint Director - Finance\nChairman - Avenues\nSergeant-At-Arms\nDirector - Club Service\nJoint Director - Club Service\nDirector - Community Service\nJoint Director - Community Service\nDirector - International Service\nJoint Director - International Service\nDirector - Professional Development\nJoint Director - Professional Development\nDirector - Sports\nJoint Director - Sports\nDirector - ED\nJoint Director - ED\nDirector - Partners-In-Service\nJoint Director - Partners-In-Service\nDirector - Web Communications\nJoint Director - Web Communications\nDirector - PR\nJoint Director - PR\nDirector - HRD\nEditor\nJoint Editor\nClub Advisor"
-  },
-  {
-   "fieldname": "column_break_14",
-   "fieldtype": "Column Break"
+   "options": "Designation"
   },
   {
    "default": "0",
@@ -129,10 +127,94 @@
    "label": "Zone",
    "options": "Zone",
    "read_only": 1
+  },
+  {
+   "fieldname": "section_break_15",
+   "fieldtype": "Section Break",
+   "label": "Pranali User Access"
+  },
+  {
+   "default": "1",
+   "depends_on": "enable_pranali_access",
+   "fieldname": "limited_access",
+   "fieldtype": "Check",
+   "label": "Limited Access"
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "label": "User",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_pranali_access",
+   "fieldtype": "Check",
+   "label": "Enable Pranali Access"
+  },
+  {
+   "fieldname": "member_details_section",
+   "fieldtype": "Section Break",
+   "label": "Member Details"
+  },
+  {
+   "default": "0",
+   "fieldname": "dues_paid",
+   "fieldtype": "Check",
+   "label": "Dues Paid",
+   "read_only": 1
+  },
+  {
+   "fieldname": "membership_valid_till",
+   "fieldtype": "Date",
+   "label": "Membership Valid Till",
+   "read_only": 1
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "label": "Address"
+  },
+  {
+   "fieldname": "membership_details_section",
+   "fieldtype": "Section Break",
+   "label": "Membership Details"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "qr_code",
+   "fieldtype": "Attach Image",
+   "hidden": 1,
+   "label": "QR Code"
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Image",
+   "label": "Image",
+   "options": "qr_code"
+  },
+  {
+   "fieldname": "column_break_19",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "verification_hash",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Verification Hash",
+   "read_only": 1
   }
  ],
- "image_field": "image",
- "modified": "2019-08-20 20:30:17.148198",
+ "index_web_pages_for_search": 1,
+ "modified": "2021-06-26 15:46:39.034470",
  "modified_by": "Administrator",
  "module": "Pranali Reloaded",
  "name": "Member",
@@ -160,23 +242,32 @@
    "write": 1
   },
   {
+   "read": 1,
+   "report": 1,
+   "role": "District Council Member"
+  },
+  {
    "create": 1,
    "email": 1,
    "export": 1,
    "print": 1,
    "read": 1,
    "report": 1,
-   "role": "presec",
-   "share": 1,
+   "role": "Club Member - Full Access",
    "write": 1
   },
   {
+   "email": 1,
+   "export": 1,
+   "print": 1,
    "read": 1,
    "report": 1,
-   "role": "DCM"
+   "role": "Club Member - Limited Access",
+   "share": 1,
+   "write": 1
   }
  ],
- "search_fields": "member_name",
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "timeline_field": "club",

@@ -1,0 +1,213 @@
+{
+ "autoname": "OCV.###",
+ "creation": "2016-10-29 22:32:48.035930",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "club",
+  "column_break_3",
+  "ocv_date",
+  "amended_from",
+  "section_break_10",
+  "gavel",
+  "charter",
+  "collar",
+  "saa",
+  "minutes",
+  "attendance",
+  "column_break_11",
+  "banner",
+  "rooster",
+  "website",
+  "membership",
+  "bye_laws",
+  "finance",
+  "section_break_5",
+  "points",
+  "percentage_points_earned",
+  "column_break_8",
+  "max_points",
+  "rotaract_year"
+ ],
+ "fields": [
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "OCV",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "club",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Club",
+   "options": "Club",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "gavel",
+   "fieldtype": "Check",
+   "label": "Is the gavel and gong present?"
+  },
+  {
+   "default": "0",
+   "fieldname": "charter",
+   "fieldtype": "Check",
+   "label": "Is the club charter present?"
+  },
+  {
+   "default": "0",
+   "fieldname": "collar",
+   "fieldtype": "Check",
+   "label": "Is the collar present?"
+  },
+  {
+   "default": "0",
+   "fieldname": "saa",
+   "fieldtype": "Check",
+   "label": "Is the SAA badge & arm band present?"
+  },
+  {
+   "default": "0",
+   "fieldname": "minutes",
+   "fieldtype": "Check",
+   "label": "Is the updated minutes book available?"
+  },
+  {
+   "default": "0",
+   "fieldname": "attendance",
+   "fieldtype": "Check",
+   "label": "Is the updated attendance muster available?"
+  },
+  {
+   "default": "0",
+   "fieldname": "banner",
+   "fieldtype": "Check",
+   "label": "Is the club banner present?"
+  },
+  {
+   "default": "0",
+   "fieldname": "rooster",
+   "fieldtype": "Check",
+   "label": "Is the club roster available?"
+  },
+  {
+   "default": "0",
+   "fieldname": "website",
+   "fieldtype": "Check",
+   "label": "Is the club website & social media updated regularly?"
+  },
+  {
+   "default": "0",
+   "fieldname": "membership",
+   "fieldtype": "Check",
+   "label": "Is the club membership file present?"
+  },
+  {
+   "default": "0",
+   "fieldname": "bye_laws",
+   "fieldtype": "Check",
+   "label": "Is the updated club bye laws present?"
+  },
+  {
+   "default": "0",
+   "fieldname": "finance",
+   "fieldtype": "Check",
+   "label": "Are the club financial records available and acknowledged by the Rotary?"
+  },
+  {
+   "fieldname": "points",
+   "fieldtype": "Int",
+   "label": "Total Points Earned",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ocv_date",
+   "fieldtype": "Date",
+   "label": "OCV Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "percentage_points_earned",
+   "fieldtype": "Percent",
+   "label": "Percentage Points Earned",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "max_points",
+   "fieldtype": "Int",
+   "label": "Max Points",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "rotaract_year",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Rotaract Year",
+   "options": "Rotaract Year",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "modified": "2021-04-26 00:06:45.985016",
+ "modified_by": "Administrator",
+ "module": "Pranali Reloaded",
+ "name": "OCV",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Club Member - Full Access",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "club"
+}
