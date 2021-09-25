@@ -12,6 +12,7 @@ class Project(Document):
 		self.validate_date()
 		self.set_status()
 		self.calculate_totals()
+		self.calculate_total_income()
 		self.set_zone()
 		self.document_status='draft'
 		self.rotaract_year = frappe.db.get_single_value("Pranali Settings", "current_rotaract_year")
@@ -50,6 +51,9 @@ class Project(Document):
 	def calculate_totals(self):
 		self.total = cint(self.home_club) + cint(self.other_club) + cint(self.dcm) \
 			+ cint(self.alumini) + cint(self.rotarians) + cint(self.pis) + cint(self.guest)
+
+	def calculate_total_income(self):
+                self.total_income = cint(self.incomes) - cint(self.expenditure) + cint(self.sponsorship)
 
 	def set_zone(self):
 		self.zone = frappe.db.get_value("Club", self.club, "zone")
