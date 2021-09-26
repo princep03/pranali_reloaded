@@ -1,9 +1,12 @@
 {
+ "actions": [],
  "creation": "2015-06-01 15:10:59.705879",
  "doctype": "DocType",
+ "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "club_name"
+  "club_name",
+  "attendance_count"
  ],
  "fields": [
   {
@@ -14,11 +17,19 @@
    "label": "Club Name",
    "options": "Club",
    "reqd": 1
+  },
+  {
+   "fieldname": "attendance_count",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Attendance Count",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
- "modified": "2021-04-25 21:41:21.648637",
+ "links": [],
+ "modified": "2021-09-27 03:35:08.316186",
  "modified_by": "Administrator",
  "module": "Pranali Reloaded",
  "name": "Joint Project Club",
