@@ -15,32 +15,37 @@ body {
   font-family: 'Poppins', sans-serif;
   overflow: hidden;
   align-items: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .copy-right-area, .navbar, .d-flex {
   display: none;
 }
 
-body {
-  background-repeat: no-repeat;
-  background-size: cover;
-  
+.wave {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  z-index: -1;
 }
 
-/* .wave2 {
+.wave2 {
   position: fixed;
   top: 0;
   right: 0;
   height: 100%;
   transform: rotate(180deg);
   z-index: -1;
-} */
+}
 
 .container-new {
   overflow: hidden;
   position: relative;
   width: 425px;
-  height: 650px;
+  height: 550px;
   background: rgb(0, 0, 0);
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
   display: grid;
@@ -73,7 +78,11 @@ form {
 }
 
 .login-content img {
-  height: 110px;
+  height: 80px;
+}
+.login-content h3 {
+ color: white;
+ text-shadow: 2px 2px 5px red;
 }
 
 .login-content h2 {
@@ -94,7 +103,6 @@ form {
 
 .login-content .input-div.one {
   margin-top: 0;
-  color: #fff;
 }
 
 .i {
@@ -232,7 +240,7 @@ a:hover {
   /* padding: 15px; */
   border: 0;
   border-radius: 0;
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(0,0,0);
   box-shadow: none;
 }
 
@@ -240,8 +248,6 @@ a:hover {
   border-bottom: 0;
   text-align: center;
   text-transform: uppercase;
-  text-decoration-color: #fff;
-  color: #fff;
 }
 
 .login-content.page-card .form-signin .form-control {
@@ -305,7 +311,9 @@ a:hover {
   .img {
     display: none;
   }
- 
+  .wave, .wave2 {
+    display: none;
+  }
   .login-content {
     justify-content: center;
   }
