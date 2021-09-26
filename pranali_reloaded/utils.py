@@ -6,7 +6,7 @@ def welcome_email():
 	if subject:
 		return subject
 	else:
-		return "Welcome to Pranali"
+		return "Welcome to The Reporting System"
 
 @frappe.whitelist(allow_guest=True)
 def login_as(user):
