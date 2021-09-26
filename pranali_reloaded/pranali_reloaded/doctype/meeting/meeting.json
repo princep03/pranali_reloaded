@@ -9,14 +9,14 @@
   "start_time",
   "type_of_meeting",
   "district",
-  "presidents_name",
+  "president_name",
   "column_break_3",
   "venue",
   "end_time",
   "reporting_month",
   "meeting_number",
   "club_name",
-  "presidents_contact",
+  "president_contact",
   "section_break_5",
   "minutes",
   "images_links_section",
@@ -243,12 +243,6 @@
    "label": "District"
   },
   {
-   "depends_on": "eval: in_list([\"Sister Club Meet\",\"Twin Club Meet\",\"Other Districts\",'Joint GBM'], doc.type_of_meeting)",
-   "fieldname": "presidents_name",
-   "fieldtype": "Data",
-   "label": "President's Name"
-  },
-  {
    "bold": 1,
    "fieldname": "meeting_number",
    "fieldtype": "Int",
@@ -260,12 +254,6 @@
    "fieldname": "club_name",
    "fieldtype": "Data",
    "label": "Club Name"
-  },
-  {
-   "depends_on": "eval: in_list([\"Sister Club Meet\",\"Twin Club Meet\",\"Other Districts\",'Joint GBM'], doc.type_of_meeting)",
-   "fieldname": "presidents_contact",
-   "fieldtype": "Int",
-   "label": "President's Contact"
   },
   {
    "fieldname": "images_links_section",
@@ -311,12 +299,24 @@
    "label": "Home Club Attendance",
    "options": "Home Club Attendance",
    "reqd": 1
+  },
+  {
+   "depends_on": "eval: in_list([\"Sister Club Meet\",\"Twin Club Meet\",\"Other Districts\",'Joint GBM'], doc.type_of_meeting)",
+   "fieldname": "president_name",
+   "fieldtype": "Data",
+   "label": "President's Name"
+  },
+  {
+   "depends_on": "eval: in_list([\"Sister Club Meet\",\"Twin Club Meet\",\"Other Districts\",'Joint GBM'], doc.type_of_meeting)",
+   "fieldname": "president_contact",
+   "fieldtype": "Int",
+   "label": "President's Contact"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-09-27 04:27:11.045448",
+ "modified": "2021-09-27 04:29:55.228006",
  "modified_by": "Administrator",
  "module": "Pranali Reloaded",
  "name": "Meeting",

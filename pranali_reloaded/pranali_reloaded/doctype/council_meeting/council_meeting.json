@@ -114,6 +114,7 @@
    "label": "Images Links"
   },
   {
+   "bold": 1,
    "fieldname": "images_link_1",
    "fieldtype": "Data",
    "label": "Images Link 1",
@@ -124,6 +125,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "bold": 1,
    "fieldname": "images_link_2",
    "fieldtype": "Data",
    "label": "Images Link 2"
@@ -133,6 +135,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "bold": 1,
    "fieldname": "images_link_3",
    "fieldtype": "Data",
    "label": "Images Link 3"
@@ -142,6 +145,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "bold": 1,
    "fieldname": "images_link_4",
    "fieldtype": "Data",
    "label": "Images Link 4"
@@ -268,7 +272,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-09-26 15:09:05.060293",
+ "modified": "2021-09-27 04:33:11.031177",
  "modified_by": "Administrator",
  "module": "Pranali Reloaded",
  "name": "Council Meeting",

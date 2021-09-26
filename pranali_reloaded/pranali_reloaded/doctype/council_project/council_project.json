@@ -211,6 +211,7 @@
    "label": "Images Link"
   },
   {
+   "bold": 1,
    "fieldname": "images_link_1",
    "fieldtype": "Data",
    "label": "Images Link 1",
@@ -221,6 +222,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "bold": 1,
    "fieldname": "images_link_2",
    "fieldtype": "Data",
    "label": "Images Link 2"
@@ -230,6 +232,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "bold": 1,
    "fieldname": "images_link_3",
    "fieldtype": "Data",
    "label": "Images Link 3"
@@ -239,6 +242,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "bold": 1,
    "fieldname": "images_link_4",
    "fieldtype": "Data",
    "label": "Images Link 4"
@@ -248,6 +252,7 @@
    "fieldtype": "Section Break"
   },
   {
+   "bold": 1,
    "fieldname": "incomes",
    "fieldtype": "Int",
    "label": "Income"
@@ -267,6 +272,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "bold": 1,
    "fieldname": "expenditure",
    "fieldtype": "Int",
    "label": "Expenditure"
@@ -429,7 +435,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-09-27 03:18:34.753971",
+ "modified": "2021-09-27 04:32:39.387950",
  "modified_by": "Administrator",
  "module": "Pranali Reloaded",
  "name": "Council Project",
