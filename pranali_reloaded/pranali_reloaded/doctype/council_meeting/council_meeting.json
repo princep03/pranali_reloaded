@@ -1,0 +1,302 @@
+{
+ "actions": [],
+ "autoname": "CMEET.######",
+ "creation": "2021-09-26 15:07:36.314386",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "start_time",
+  "type_of_meeting",
+  "column_break_3",
+  "venue",
+  "end_time",
+  "reporting_month",
+  "meeting_number",
+  "section_break_5",
+  "minutes",
+  "images_links_section",
+  "images_link_1",
+  "column_break_17",
+  "images_link_2",
+  "column_break_19",
+  "images_link_3",
+  "column_break_21",
+  "images_link_4",
+  "attendance_section",
+  "district_council_members",
+  "dcm_attendees",
+  "rotarians",
+  "guest",
+  "percentage_attendance",
+  "column_break_10",
+  "alumini",
+  "pis",
+  "total_attendance",
+  "section_break_4",
+  "team",
+  "rotaract_year",
+  "column_break_4",
+  "zone",
+  "section_break_6",
+  "document_status",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "start_time",
+   "fieldtype": "Time",
+   "label": "Start Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "type_of_meeting",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Type of meeting",
+   "options": "Council Meet\nDRR-PresSec\nAvenue Meet\nZRR-PresSec\nZonal Meet\nAny Other",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "venue",
+   "fieldtype": "Data",
+   "label": "Venue",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_time",
+   "fieldtype": "Time",
+   "label": "End Time",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval: doc.docstatus==1",
+   "fieldname": "reporting_month",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Reporting Month",
+   "options": "January\nFebruary\nMarch\nApril\nMay\nJune\nJuly\nAugust\nSeptember\nOctober\nNovember\nDecember"
+  },
+  {
+   "bold": 1,
+   "fieldname": "meeting_number",
+   "fieldtype": "Int",
+   "label": "Meeting Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "minutes",
+   "fieldtype": "Text Editor",
+   "label": "Minutes",
+   "reqd": 1
+  },
+  {
+   "fieldname": "images_links_section",
+   "fieldtype": "Section Break",
+   "label": "Images Links"
+  },
+  {
+   "fieldname": "images_link_1",
+   "fieldtype": "Data",
+   "label": "Images Link 1",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "images_link_2",
+   "fieldtype": "Data",
+   "label": "Images Link 2"
+  },
+  {
+   "fieldname": "column_break_19",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "images_link_3",
+   "fieldtype": "Data",
+   "label": "Images Link 3"
+  },
+  {
+   "fieldname": "column_break_21",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "images_link_4",
+   "fieldtype": "Data",
+   "label": "Images Link 4"
+  },
+  {
+   "fieldname": "attendance_section",
+   "fieldtype": "Section Break",
+   "label": "Attendance"
+  },
+  {
+   "fieldname": "district_council_members",
+   "fieldtype": "Int",
+   "label": "District Council Members",
+   "reqd": 1
+  },
+  {
+   "fieldname": "dcm_attendees",
+   "fieldtype": "Link",
+   "label": "District Council Attendees",
+   "options": "Council Attendees",
+   "reqd": 1
+  },
+  {
+   "fieldname": "rotarians",
+   "fieldtype": "Int",
+   "label": "Rotarians"
+  },
+  {
+   "fieldname": "guest",
+   "fieldtype": "Int",
+   "label": "Guest"
+  },
+  {
+   "fieldname": "percentage_attendance",
+   "fieldtype": "Percent",
+   "label": "Percentage Attendance",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "alumini",
+   "fieldtype": "Int",
+   "label": "Alumni"
+  },
+  {
+   "fieldname": "pis",
+   "fieldtype": "Int",
+   "label": "Other PIS"
+  },
+  {
+   "fieldname": "total_attendance",
+   "fieldtype": "Int",
+   "label": "Total Attendance",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "team",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Team",
+   "options": "Council Team",
+   "reqd": 1
+  },
+  {
+   "fieldname": "rotaract_year",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Rotaract Year",
+   "options": "Rotaract Year",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "zone",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Zone",
+   "options": "Zone",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "document_status",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Document Status",
+   "options": "Document Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Council Meeting",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Council Meeting",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2021-09-26 15:09:05.060293",
+ "modified_by": "Administrator",
+ "module": "Pranali Reloaded",
+ "name": "Council Meeting",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "District Council Member",
+   "set_user_permissions": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "timeline_field": "team",
+ "title_field": "team"
+}
