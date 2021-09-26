@@ -1,4 +1,5 @@
 {
+ "actions": [],
  "allow_import": 1,
  "autoname": "PROJ.######",
  "creation": "2015-03-19 13:05:26.524336",
@@ -17,6 +18,7 @@
   "project_status",
   "section_break_8",
   "avenue_1",
+  "rap",
   "column_break_8",
   "avenue_2",
   "section_break_10",
@@ -25,6 +27,8 @@
   "end_time",
   "section_break_19",
   "project_level",
+  "column_break_21",
+  "project_frequency",
   "section_break_14",
   "aim",
   "section_break_16",
@@ -33,18 +37,31 @@
   "summary",
   "section_break_29",
   "follow_up",
+  "images_link_section",
+  "images_link_1",
+  "column_break_30",
+  "images_link_2",
+  "column_break_32",
+  "images_link_3",
+  "column_break_34",
+  "images_link_4",
   "section_break_22",
   "incomes",
+  "column_break_38",
+  "sponsorship",
   "column_break_24",
   "expenditure",
+  "column_break_42",
+  "total_income",
   "chairperson",
   "chairpersons",
   "attendance_section",
   "home_club",
+  "home_club_attendees",
   "dcm",
   "rotarians",
   "guest",
-  "column_break_32",
+  "column_break_49",
   "alumini",
   "other_club",
   "pis",
@@ -52,6 +69,9 @@
   "section_break_6",
   "joint_project",
   "jt_project_clubs",
+  "section_break_60",
+  "ambassadorial",
+  "ambassadorial_clubs",
   "section_break_35",
   "club",
   "rotaract_year",
@@ -171,8 +191,9 @@
   {
    "fieldname": "project_level",
    "fieldtype": "Select",
+   "in_standard_filter": 1,
    "label": "Project Level",
-   "options": "Club\nZone\nDistrict\nGlobal",
+   "options": "Club\nZone\nDistrict\nInter-District\nGlobal",
    "reqd": 1
   },
   {
@@ -193,7 +214,7 @@
   {
    "fieldname": "ground_work",
    "fieldtype": "Text Editor",
-   "label": "Groundwork (Pre-project)",
+   "label": "How was the Project Carried out?",
    "reqd": 1
   },
   {
@@ -203,7 +224,7 @@
   {
    "fieldname": "summary",
    "fieldtype": "Text Editor",
-   "label": "Summary",
+   "label": "Impact Analysis",
    "reqd": 1
   },
   {
@@ -216,14 +237,61 @@
    "label": "Follow Up / Feedback"
   },
   {
+   "fieldname": "images_link_section",
+   "fieldtype": "Section Break",
+   "label": "Images Link"
+  },
+  {
+   "fieldname": "images_link_1",
+   "fieldtype": "Data",
+   "label": "Images Link 1",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_30",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "images_link_2",
+   "fieldtype": "Data",
+   "label": "Images Link 2"
+  },
+  {
+   "fieldname": "column_break_32",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "images_link_3",
+   "fieldtype": "Data",
+   "label": "Images Link 3"
+  },
+  {
+   "fieldname": "column_break_34",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "images_link_4",
+   "fieldtype": "Data",
+   "label": "Images Link 4"
+  },
+  {
    "fieldname": "section_break_22",
    "fieldtype": "Section Break"
   },
   {
    "fieldname": "incomes",
    "fieldtype": "Int",
-   "label": "Income",
-   "reqd": 1
+   "label": "Income"
+  },
+  {
+   "fieldname": "column_break_38",
+   "fieldtype": "Column Break"
+  },
+  {
+   "bold": 1,
+   "fieldname": "sponsorship",
+   "fieldtype": "Int",
+   "label": "Sponsorship"
   },
   {
    "fieldname": "column_break_24",
@@ -232,8 +300,7 @@
   {
    "fieldname": "expenditure",
    "fieldtype": "Int",
-   "label": "Expenditure",
-   "reqd": 1
+   "label": "Expenditure"
   },
   {
    "fieldname": "chairperson",
@@ -246,6 +313,11 @@
    "label": "Chairpersons",
    "options": "Project Chairperson",
    "reqd": 1
+  },
+  {
+   "fieldname": "attendance_section",
+   "fieldtype": "Section Break",
+   "label": "Attendance"
   },
   {
    "fieldname": "home_club",
@@ -261,16 +333,12 @@
   {
    "fieldname": "rotarians",
    "fieldtype": "Int",
-   "label": "Rotarians"
+   "label": "Joint Project Club Attendance"
   },
   {
-   "fieldname": "other_club",
+   "fieldname": "guest",
    "fieldtype": "Int",
-   "label": "Other Club"
-  },
-  {
-   "fieldname": "column_break_32",
-   "fieldtype": "Column Break"
+   "label": "Guest"
   },
   {
    "fieldname": "alumini",
@@ -278,14 +346,14 @@
    "label": "Alumni"
   },
   {
-   "fieldname": "pis",
+   "fieldname": "other_club",
    "fieldtype": "Int",
-   "label": "Other PIS"
+   "label": "Ambassadorial Club Attendance"
   },
   {
-   "fieldname": "guest",
+   "fieldname": "pis",
    "fieldtype": "Int",
-   "label": "Guest"
+   "label": "PIS(Rotary, Interact & Innerwheel)"
   },
   {
    "fieldname": "total",
@@ -308,7 +376,7 @@
    "depends_on": "joint_project",
    "fieldname": "jt_project_clubs",
    "fieldtype": "Table",
-   "label": "Project Clubs",
+   "label": "Joint Project Clubs",
    "options": "Joint Project Club"
   },
   {
@@ -323,6 +391,14 @@
    "label": "Club",
    "options": "Club",
    "reqd": 1
+  },
+  {
+   "fieldname": "rotaract_year",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Rotaract Year",
+   "options": "Rotaract Year",
+   "read_only": 1
   },
   {
    "fieldname": "column_break_4",
@@ -353,22 +429,70 @@
    "read_only": 1
   },
   {
-   "fieldname": "attendance_section",
-   "fieldtype": "Section Break",
-   "label": "Attendance"
+   "fieldname": "column_break_49",
+   "fieldtype": "Column Break"
   },
   {
-   "fieldname": "rotaract_year",
-   "fieldtype": "Link",
-   "in_standard_filter": 1,
-   "label": "Rotaract Year",
-   "options": "Rotaract Year",
+   "fieldname": "column_break_42",
+   "fieldtype": "Column Break"
+  },
+  {
+   "bold": 1,
+   "fieldname": "total_income",
+   "fieldtype": "Int",
+   "label": "Total Profit",
    "read_only": 1
+  },
+  {
+   "fieldname": "section_break_60",
+   "fieldtype": "Section Break",
+   "label": "Ambassadorial"
+  },
+  {
+   "default": "0",
+   "fieldname": "ambassadorial",
+   "fieldtype": "Check",
+   "label": "Ambassadorial"
+  },
+  {
+   "depends_on": "ambassadorial",
+   "fieldname": "ambassadorial_clubs",
+   "fieldtype": "Table",
+   "label": "Ambassadorial Clubs",
+   "options": "Ambassadorial Club"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:((doc.avenue_2=='Public Relations and Marketing (S)') || (doc.avenue_1=='Public Relations and Marketing (S)'))",
+   "fieldname": "rap",
+   "fieldtype": "Check",
+   "in_standard_filter": 1,
+   "label": "RAP"
+  },
+  {
+   "fieldname": "column_break_21",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "project_frequency",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Project Frequency",
+   "options": "\nOnce\nMonthly\nQuarterly\nYearly\nFlagship",
+   "reqd": 1
+  },
+  {
+   "fieldname": "home_club_attendees",
+   "fieldtype": "Table MultiSelect",
+   "label": "Home Club Attendance",
+   "options": "Home Club Attendance",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
- "modified": "2021-05-26 12:14:50.089302",
+ "links": [],
+ "modified": "2021-09-25 02:29:15.702115",
  "modified_by": "Administrator",
  "module": "Pranali Reloaded",
  "name": "Project",
