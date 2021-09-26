@@ -22,7 +22,7 @@ class CouncilMeeting(Document):
 		frappe.db.set_value('Meeting', self.name, 'document_status', 'cancelled')
 
 	def calculate_totals(self):
-		self.total = cint(self.district_council_members) + cint(self.rotarians) + cint(self.alumini) + cint(self.pis) + cint(self.guest)
+		self.total_attendance = cint(self.district_council_members) + cint(self.rotarians) + cint(self.alumini) + cint(self.pis) + cint(self.guest)
 
 	def validate_date(self):
 		if self.date > today():

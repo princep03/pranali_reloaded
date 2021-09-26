@@ -6,3 +6,11 @@ frappe.ui.form.on('Council Meeting', {
 
 	// }
 });
+
+cur_frm.cscript.guest = function(doc) {
+	doc.total_attendance = cint(doc.district_council_members) + cint(doc.alumini) + cint(doc.rotarians) + cint(doc.pis) + cint(doc.guest)
+	refresh_field('total_attendance');
+};
+
+cur_frm.cscript.dcm = cur_frm.cscript.alumini =
+	cur_frm.cscript.rotarians = cur_frm.cscript.pis = cur_frm.cscript.guest;
