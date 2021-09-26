@@ -8,14 +8,28 @@
   "date",
   "start_time",
   "type_of_meeting",
+  "district",
+  "presidents_name",
   "column_break_3",
   "venue",
   "end_time",
   "reporting_month",
+  "meeting_number",
+  "club_name",
+  "presidents_contact",
   "section_break_5",
   "minutes",
+  "images_links_section",
+  "images_link_1",
+  "column_break_17",
+  "images_link_2",
+  "column_break_19",
+  "images_link_3",
+  "column_break_21",
+  "images_link_4",
   "attendance_section",
   "home_club",
+  "home_club_attendance",
   "district_council_members",
   "rotarians",
   "guest",
@@ -57,7 +71,7 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Type of meeting",
-   "options": "GBM\nBOD Meet\nJoint Meet\nPIS Interaction\nOCV\nAny Other"
+   "options": "GBM\nBOD Meet\nPIS Meet\nJoint GBM\nInstallation\nOCV\nSister Club Meet\nTwin Club Meet\nOther Districts\nAny Other"
   },
   {
    "fieldname": "column_break_3",
@@ -221,12 +235,88 @@
    "fieldtype": "Int",
    "label": "Total Registered Board of Directors",
    "read_only": 1
+  },
+  {
+   "depends_on": "eval: in_list([\"Sister Club Meet\",\"Twin Club Meet\",\"Other Districts\"], doc.type_of_meeting)",
+   "fieldname": "district",
+   "fieldtype": "Int",
+   "label": "District"
+  },
+  {
+   "depends_on": "eval: in_list([\"Sister Club Meet\",\"Twin Club Meet\",\"Other Districts\",'Joint GBM'], doc.type_of_meeting)",
+   "fieldname": "presidents_name",
+   "fieldtype": "Data",
+   "label": "President's Name"
+  },
+  {
+   "bold": 1,
+   "fieldname": "meeting_number",
+   "fieldtype": "Int",
+   "label": "Meeting Number",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval: in_list([\"Sister Club Meet\",\"Twin Club Meet\",\"Other Districts\",'Joint GBM'], doc.type_of_meeting)",
+   "fieldname": "club_name",
+   "fieldtype": "Data",
+   "label": "Club Name"
+  },
+  {
+   "depends_on": "eval: in_list([\"Sister Club Meet\",\"Twin Club Meet\",\"Other Districts\",'Joint GBM'], doc.type_of_meeting)",
+   "fieldname": "presidents_contact",
+   "fieldtype": "Int",
+   "label": "President's Contact"
+  },
+  {
+   "fieldname": "images_links_section",
+   "fieldtype": "Section Break",
+   "label": "Images Links"
+  },
+  {
+   "fieldname": "images_link_1",
+   "fieldtype": "Data",
+   "label": "Images Link 1",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "images_link_2",
+   "fieldtype": "Data",
+   "label": "Images Link 2"
+  },
+  {
+   "fieldname": "column_break_19",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "images_link_3",
+   "fieldtype": "Data",
+   "label": "Images Link 3"
+  },
+  {
+   "fieldname": "column_break_21",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "images_link_4",
+   "fieldtype": "Data",
+   "label": "Images Link 4"
+  },
+  {
+   "fieldname": "home_club_attendance",
+   "fieldtype": "Link",
+   "label": "Home Club Attendance",
+   "options": "Home Club Attendance",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-09-26 13:52:14.829553",
+ "modified": "2021-09-26 14:27:29.666683",
  "modified_by": "Administrator",
  "module": "Pranali Reloaded",
  "name": "Meeting",
