@@ -1,0 +1,30 @@
+{
+ "actions": [],
+ "creation": "2021-09-26 13:16:17.708526",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "dcm_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "dcm_name",
+   "fieldtype": "Link",
+   "label": "District Council Member",
+   "options": "District Council Members"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-09-26 13:40:28.119110",
+ "modified_by": "Administrator",
+ "module": "Pranali Reloaded",
+ "name": "Council Attendees",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

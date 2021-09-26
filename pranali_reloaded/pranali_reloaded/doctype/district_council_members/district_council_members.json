@@ -1,0 +1,165 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:dcm_name",
+ "creation": "2021-09-26 13:36:07.639250",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "district_council_member_details_section",
+  "dcm_name",
+  "dob",
+  "council_designation_section",
+  "council_designation",
+  "section_break_6",
+  "contact",
+  "gender",
+  "column_break_9",
+  "email",
+  "address",
+  "home_club_section",
+  "club"
+ ],
+ "fields": [
+  {
+   "fieldname": "district_council_member_details_section",
+   "fieldtype": "Section Break",
+   "label": "District Council Member Details"
+  },
+  {
+   "fieldname": "dcm_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "DCM Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "dob",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "council_designation_section",
+   "fieldtype": "Section Break",
+   "label": "Council Designation"
+  },
+  {
+   "fieldname": "council_designation",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Council Designation",
+   "options": "Council Designation",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "contact",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Contact",
+   "reqd": 1
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Link",
+   "label": "Gender",
+   "options": "Gender"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "label": "Address"
+  },
+  {
+   "fieldname": "home_club_section",
+   "fieldtype": "Section Break",
+   "label": "Home Club"
+  },
+  {
+   "fieldname": "club",
+   "fieldtype": "Link",
+   "label": "Club",
+   "options": "Club"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-09-26 13:38:16.041060",
+ "modified_by": "Administrator",
+ "module": "Pranali Reloaded",
+ "name": "District Council Members",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "District Council Member",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Club Member - Full Access",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Club Member - Limited Access",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
