@@ -36,13 +36,6 @@ def set_desktop_icons():
 				"link": '#List/OCV/List'
 			},
 			{
-				"label": _('District Payments'),
-				"icon": "octicon octicon-mail",
-				"type": 'doctype',
-				"name": 'District Payments',
-				"link": '#List/District Payments/List'
-			},
-			{
 				"label": _('Receipt'),
 				"icon": "octicon octicon-clippy",
 				"type": 'doctype',
@@ -79,14 +72,20 @@ def set_desktop_icons():
 				"name": 'PIS Interaction',
 				"link": '#List/PIS Interaction/List'
 			},
-			{
-				"category": "Administration",
-				"label": _('AARA Nomination'),
-				"icon": "octicon octicon-gift",
-				"type": 'doctype',
-				"name": 'AARA Nomination',
-				"link": '#List/AARA Nomination/List'
-			}
+            {
+                "label": _('Council Project'),
+                "icon": "octicon octicon-checklist",
+                "type": 'doctype',
+                "name": 'Council Project',
+                "link": '#List/Council Project/List'
+            },
+            {
+    	        "label": _('Council Meeting'),
+                "icon": "octicon octicon-briefcase",
+                "type": 'doctype',
+                "name": 'Council Meeting',
+                "link": '#List/Council Meeting/List'
+            }
 		],
 		"Tools": [
 			{
@@ -104,25 +103,11 @@ def set_desktop_icons():
 				"link": '#insight-engine'
 			},
 			{
-				"label": _('Dashboard'),
-				"name": 'Dashboard',
-				"icon": "octicon octicon-graph",
-				"type": "link",
-				"link": "#dashboard",
-			},
-			{
 				"label": _('Event Calendar'),
 				"icon": "octicon octicon-calendar",
 				"type": 'doctype',
 				"name": 'Event Calendar',
 				"link": '#List/Event/Calendar/Default'
-			},
-			{
-				"label": _('Leaderboard'),
-				"icon": "octicon octicon-star",
-				"type": 'page',
-				"name": 'Leaderboard',
-				"link": '#social/users'
 			},
 			{
 				"label": _('Social Wall'),

@@ -1,5 +1,5 @@
 {
- "_liked_by": "[\"Administrator\"]",
+ "actions": [],
  "autoname": "PIS.######",
  "creation": "2021-07-04 16:28:03.738806",
  "doctype": "DocType",
@@ -7,8 +7,13 @@
  "field_order": [
   "pis_category",
   "club_name",
+  "start_time",
+  "venue",
   "column_break_2",
+  "interaction_type",
+  "meeting_number",
   "project_name",
+  "end_time",
   "section_break_5",
   "summary",
   "section_break_6",
@@ -32,19 +37,19 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "PIS Category",
-   "options": "Rotary\nInteract"
+   "options": "Rotary\nInteract\nInnerwheel"
   },
   {
    "fieldname": "column_break_2",
    "fieldtype": "Column Break"
   },
   {
+   "depends_on": "eval:doc.interaction_type=='Project'",
    "fieldname": "project_name",
    "fieldtype": "Data",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Project Name",
-   "reqd": 1
+   "label": "Project Name"
   },
   {
    "fieldname": "section_break_6",
@@ -140,14 +145,51 @@
    "fieldname": "summary",
    "fieldtype": "Text Editor",
    "label": "Summary"
+  },
+  {
+   "fieldname": "start_time",
+   "fieldtype": "Datetime",
+   "label": "Start Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "venue",
+   "fieldtype": "Data",
+   "label": "Venue",
+   "reqd": 1
+  },
+  {
+   "fieldname": "interaction_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Interaction Type",
+   "options": "Meeting\nProject",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.interaction_type=='Meeting'",
+   "fieldname": "meeting_number",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Meeting Number"
+  },
+  {
+   "fieldname": "end_time",
+   "fieldtype": "Datetime",
+   "label": "End Time",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
- "modified": "2021-07-04 16:54:58.866789",
+ "links": [],
+ "modified": "2021-09-26 14:39:44.410951",
  "modified_by": "Administrator",
  "module": "Pranali Reloaded",
  "name": "PIS Interaction",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {
@@ -194,5 +236,5 @@
  "sort_field": "modified",
  "sort_order": "DESC",
  "timeline_field": "club",
- "title_field": "project_name"
+ "title_field": "interaction_type"
 }

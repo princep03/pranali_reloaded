@@ -1,4 +1,5 @@
 {
+ "actions": [],
  "allow_copy": 1,
  "allow_import": 1,
  "allow_rename": 1,
@@ -32,11 +33,7 @@
   "instagram_handle",
   "column_break_8",
   "facebook_page_address",
-  "twitter_handle",
-  "section_break_24",
-  "buddy_council_member",
-  "column_break_26",
-  "buddy_council_name"
+  "twitter_handle"
  ],
  "fields": [
   {
@@ -171,26 +168,6 @@
    "label": "Instagram Handle"
   },
   {
-   "fieldname": "section_break_24",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "buddy_council_member",
-   "fieldtype": "Link",
-   "label": "Buddy Council Member",
-   "options": "User"
-  },
-  {
-   "fieldname": "column_break_26",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fetch_from": "buddy_council_member.full_name",
-   "fieldname": "buddy_council_name",
-   "fieldtype": "Data",
-   "label": "Buddy Council Name"
-  },
-  {
    "fieldname": "board_of_directors",
    "fieldtype": "Int",
    "label": "Board Of Directors",
@@ -205,10 +182,12 @@
   }
  ],
  "index_web_pages_for_search": 1,
- "modified": "2021-07-03 19:23:42.108799",
+ "links": [],
+ "modified": "2021-09-26 15:13:38.034540",
  "modified_by": "Administrator",
  "module": "Pranali Reloaded",
  "name": "Club",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

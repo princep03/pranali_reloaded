@@ -302,7 +302,8 @@
   {
    "fieldname": "dcm",
    "fieldtype": "Int",
-   "label": "District Council Members"
+   "label": "District Council Members",
+   "reqd": 1
   },
   {
    "fieldname": "rotarians",
@@ -428,7 +429,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-09-26 13:50:53.834971",
+ "modified": "2021-09-26 14:59:20.222324",
  "modified_by": "Administrator",
  "module": "Pranali Reloaded",
  "name": "Council Project",
