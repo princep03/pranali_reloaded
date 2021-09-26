@@ -29,7 +29,7 @@
   "images_link_4",
   "attendance_section",
   "home_club",
-  "home_club_attendance",
+  "home_club_attendees",
   "district_council_members",
   "rotarians",
   "guest",
@@ -306,8 +306,8 @@
    "label": "Images Link 4"
   },
   {
-   "fieldname": "home_club_attendance",
-   "fieldtype": "Link",
+   "fieldname": "home_club_attendees",
+   "fieldtype": "Table MultiSelect",
    "label": "Home Club Attendance",
    "options": "Home Club Attendance",
    "reqd": 1
@@ -316,7 +316,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-09-26 14:27:29.666683",
+ "modified": "2021-09-27 04:27:11.045448",
  "modified_by": "Administrator",
  "module": "Pranali Reloaded",
  "name": "Meeting",
