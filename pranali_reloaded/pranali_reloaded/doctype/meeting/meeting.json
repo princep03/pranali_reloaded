@@ -21,11 +21,9 @@
   "minutes",
   "images_links_section",
   "images_link_1",
-  "column_break_17",
   "images_link_2",
   "column_break_19",
   "images_link_3",
-  "column_break_21",
   "images_link_4",
   "attendance_section",
   "home_club",
@@ -267,10 +265,6 @@
    "reqd": 1
   },
   {
-   "fieldname": "column_break_17",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "images_link_2",
    "fieldtype": "Data",
    "label": "Images Link 2"
@@ -285,10 +279,6 @@
    "label": "Images Link 3"
   },
   {
-   "fieldname": "column_break_21",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "images_link_4",
    "fieldtype": "Data",
    "label": "Images Link 4"
@@ -296,7 +286,7 @@
   {
    "fieldname": "home_club_attendees",
    "fieldtype": "Table MultiSelect",
-   "label": "Home Club Attendance",
+   "label": "Home Club Attendees Name",
    "options": "Home Club Attendance",
    "reqd": 1
   },
@@ -316,7 +306,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-09-27 04:29:55.228006",
+ "modified": "2021-09-27 11:39:18.594848",
  "modified_by": "Administrator",
  "module": "Pranali Reloaded",
  "name": "Meeting",

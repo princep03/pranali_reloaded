@@ -39,19 +39,12 @@
   "follow_up",
   "images_link_section",
   "images_link_1",
-  "column_break_30",
   "images_link_2",
-  "column_break_32",
   "images_link_3",
-  "column_break_34",
   "images_link_4",
   "section_break_22",
   "incomes",
-  "column_break_38",
   "sponsorship",
-  "column_break_24",
-  "expenditure",
-  "column_break_42",
   "total_income",
   "chairperson",
   "chairpersons",
@@ -249,28 +242,16 @@
    "reqd": 1
   },
   {
-   "fieldname": "column_break_30",
-   "fieldtype": "Column Break"
-  },
-  {
    "bold": 1,
    "fieldname": "images_link_2",
    "fieldtype": "Data",
    "label": "Images Link 2"
   },
   {
-   "fieldname": "column_break_32",
-   "fieldtype": "Column Break"
-  },
-  {
    "bold": 1,
    "fieldname": "images_link_3",
    "fieldtype": "Data",
    "label": "Images Link 3"
-  },
-  {
-   "fieldname": "column_break_34",
-   "fieldtype": "Column Break"
   },
   {
    "bold": 1,
@@ -289,24 +270,10 @@
    "label": "Income"
   },
   {
-   "fieldname": "column_break_38",
-   "fieldtype": "Column Break"
-  },
-  {
    "bold": 1,
    "fieldname": "sponsorship",
    "fieldtype": "Int",
    "label": "Sponsorship"
-  },
-  {
-   "fieldname": "column_break_24",
-   "fieldtype": "Column Break"
-  },
-  {
-   "bold": 1,
-   "fieldname": "expenditure",
-   "fieldtype": "Int",
-   "label": "Expenditure"
   },
   {
    "fieldname": "chairperson",
@@ -439,10 +406,6 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "column_break_42",
-   "fieldtype": "Column Break"
-  },
-  {
    "bold": 1,
    "fieldname": "total_income",
    "fieldtype": "Int",
@@ -490,7 +453,7 @@
   {
    "fieldname": "home_club_attendees",
    "fieldtype": "Table MultiSelect",
-   "label": "Home Club Attendance",
+   "label": "Home Club Attendees Name",
    "options": "Home Club Attendance",
    "reqd": 1
   }
@@ -498,7 +461,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-09-27 04:31:21.705280",
+ "modified": "2021-09-27 11:38:13.772702",
  "modified_by": "Administrator",
  "module": "Pranali Reloaded",
  "name": "Project",
