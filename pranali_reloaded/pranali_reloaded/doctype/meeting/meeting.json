@@ -29,7 +29,6 @@
   "images_link_4",
   "attendance_section",
   "home_club",
-  "home_club_attendees",
   "district_council_members",
   "rotarians",
   "guest",
@@ -304,18 +303,12 @@
   {
    "fieldname": "column_break_21",
    "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "home_club_attendees",
-   "fieldtype": "Table MultiSelect",
-   "label": "Home Club Attendees",
-   "options": "Home Club Attendance"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-09-27 12:13:15.158332",
+ "modified": "2021-09-27 12:32:50.602967",
  "modified_by": "Administrator",
  "module": "Pranali Reloaded",
  "name": "Meeting",
