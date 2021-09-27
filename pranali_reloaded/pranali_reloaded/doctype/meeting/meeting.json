@@ -22,7 +22,6 @@
   "images_links_section",
   "images_link_1",
   "images_link_2",
-  "column_break_19",
   "images_link_3",
   "images_link_4",
   "attendance_section",
@@ -269,10 +268,6 @@
    "label": "Images Link 2"
   },
   {
-   "fieldname": "column_break_19",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "images_link_3",
    "fieldtype": "Data",
    "label": "Images Link 3"
@@ -298,7 +293,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-09-27 11:48:34.102991",
+ "modified": "2021-09-27 12:02:07.057733",
  "modified_by": "Administrator",
  "module": "Pranali Reloaded",
  "name": "Meeting",
