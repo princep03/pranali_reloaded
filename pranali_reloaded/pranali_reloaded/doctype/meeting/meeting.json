@@ -27,7 +27,6 @@
   "images_link_4",
   "attendance_section",
   "home_club",
-  "home_club_attendees",
   "district_council_members",
   "rotarians",
   "guest",
@@ -284,13 +283,6 @@
    "label": "Images Link 4"
   },
   {
-   "fieldname": "home_club_attendees",
-   "fieldtype": "Table MultiSelect",
-   "label": "Home Club Attendees Name",
-   "options": "Home Club Attendance",
-   "reqd": 1
-  },
-  {
    "depends_on": "eval: in_list([\"Sister Club Meet\",\"Twin Club Meet\",\"Other Districts\",'Joint GBM'], doc.type_of_meeting)",
    "fieldname": "president_name",
    "fieldtype": "Data",
@@ -306,7 +298,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-09-27 11:39:18.594848",
+ "modified": "2021-09-27 11:48:34.102991",
  "modified_by": "Administrator",
  "module": "Pranali Reloaded",
  "name": "Meeting",

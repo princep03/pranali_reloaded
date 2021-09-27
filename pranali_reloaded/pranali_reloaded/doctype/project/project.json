@@ -50,7 +50,6 @@
   "chairpersons",
   "attendance_section",
   "home_club",
-  "home_club_attendees",
   "dcm",
   "rotarians",
   "guest",
@@ -449,19 +448,12 @@
    "label": "Project Frequency",
    "options": "\nOnce\nMonthly\nQuarterly\nYearly\nFlagship",
    "reqd": 1
-  },
-  {
-   "fieldname": "home_club_attendees",
-   "fieldtype": "Table MultiSelect",
-   "label": "Home Club Attendees Name",
-   "options": "Home Club Attendance",
-   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-09-27 11:38:13.772702",
+ "modified": "2021-09-27 11:48:06.900721",
  "modified_by": "Administrator",
  "module": "Pranali Reloaded",
  "name": "Project",
