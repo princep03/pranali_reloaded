@@ -11,6 +11,7 @@
   {
    "fieldname": "member",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Member",
    "options": "Member"
   }
@@ -18,7 +19,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2021-09-27 12:42:26.023373",
+ "modified": "2021-09-27 13:03:15.331713",
  "modified_by": "Administrator",
  "module": "Pranali Reloaded",
  "name": "Home Club Attendance",
