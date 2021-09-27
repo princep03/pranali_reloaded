@@ -39,18 +39,25 @@
   "follow_up",
   "images_link_section",
   "images_link_1",
+  "column_break_33",
   "images_link_2",
+  "column_break_35",
   "images_link_3",
+  "column_break_37",
   "images_link_4",
   "section_break_22",
   "incomes",
+  "column_break_41",
   "sponsorship",
+  "column_break_43",
   "expenditure",
+  "column_break_45",
   "total_income",
   "chairperson",
   "chairpersons",
   "attendance_section",
   "home_club",
+  "home_club_attendees",
   "dcm",
   "rotarians",
   "guest",
@@ -64,6 +71,7 @@
   "jt_project_clubs",
   "section_break_60",
   "ambassadorial",
+  "ambassadorial_clubs",
   "section_break_35",
   "club",
   "rotaract_year",
@@ -260,7 +268,8 @@
   },
   {
    "fieldname": "section_break_22",
-   "fieldtype": "Section Break"
+   "fieldtype": "Section Break",
+   "label": "Total Profit"
   },
   {
    "bold": 1,
@@ -449,12 +458,48 @@
    "fieldname": "expenditure",
    "fieldtype": "Int",
    "label": "Expenditure"
+  },
+  {
+   "fieldname": "column_break_33",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_35",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_37",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_41",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_43",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_45",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "home_club_attendees",
+   "fieldtype": "Table MultiSelect",
+   "label": "Home Club Attendees",
+   "options": "Home Club Attendance"
+  },
+  {
+   "fieldname": "ambassadorial_clubs",
+   "fieldtype": "Table",
+   "label": "Ambassadorial Clubs",
+   "options": "Ambassadorial Club"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-09-27 12:00:52.177772",
+ "modified": "2021-09-27 12:17:15.931460",
  "modified_by": "Administrator",
  "module": "Pranali Reloaded",
  "name": "Project",
