@@ -57,6 +57,7 @@
   "chairpersons",
   "attendance_section",
   "home_club",
+  "home_club_attendees",
   "dcm",
   "rotarians",
   "guest",
@@ -487,12 +488,18 @@
    "fieldtype": "Table",
    "label": "Ambassadorial Clubs",
    "options": "Ambassadorial Club"
+  },
+  {
+   "fieldname": "home_club_attendees",
+   "fieldtype": "Table MultiSelect",
+   "label": "Home Club Attendees",
+   "options": "Home Club Attendance"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-09-27 12:32:18.499865",
+ "modified": "2021-09-27 12:43:45.725247",
  "modified_by": "Administrator",
  "module": "Pranali Reloaded",
  "name": "Project",
