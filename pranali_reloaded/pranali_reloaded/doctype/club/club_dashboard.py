@@ -11,7 +11,7 @@ def get_data():
 			},
 			{
 				'label': 'Entity',
-				'items': ['Receipt', 'District Payments', 'Member', 'Membership']
+				'items': ['Receipt', 'Member', 'Membership']
 			}
 		]
 	}

@@ -51,15 +51,15 @@ def merge_dicts(dict1, dict2):
 			dict3[key] = value + dict1[key]
 	return dict3
 
-@frappe.whitelist()
-def pay_district(source_name, target_doc=None):
-	doc = get_mapped_doc("Club", source_name, {
-		"Club": {
-			"doctype": "District Payments",
-			"field_map":{
-				"name" : "club"
-			}
-		},
-	}, target_doc)
+# @frappe.whitelist()
+# def pay_district(source_name, target_doc=None):
+# 	doc = get_mapped_doc("Club", source_name, {
+# 		"Club": {
+# 			"doctype": "District Payments",
+# 			"field_map":{
+# 				"name" : "club"
+# 			}
+# 		},
+# 	}, target_doc)
 
-	return doc
+# 	return doc
