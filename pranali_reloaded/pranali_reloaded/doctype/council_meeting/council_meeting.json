@@ -30,6 +30,7 @@
   "guest",
   "percentage_attendance",
   "column_break_10",
+  "club_rotaractors",
   "alumini",
   "pis",
   "total_attendance",
@@ -163,7 +164,7 @@
   },
   {
    "fieldname": "dcm_attendees",
-   "fieldtype": "Link",
+   "fieldtype": "Table MultiSelect",
    "label": "District Council Attendees",
    "options": "Council Attendees",
    "reqd": 1
@@ -267,12 +268,17 @@
    "options": "Council Meeting",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "club_rotaractors",
+   "fieldtype": "Int",
+   "label": "Club Rotaractors"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-09-27 04:33:11.031177",
+ "modified": "2021-10-07 01:02:06.809673",
  "modified_by": "Administrator",
  "module": "Pranali Reloaded",
  "name": "Council Meeting",

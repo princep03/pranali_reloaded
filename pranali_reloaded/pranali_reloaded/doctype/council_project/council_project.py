@@ -16,19 +16,17 @@ class CouncilProject(Document):
 		self.rotaract_year = frappe.db.get_single_value("Pranali Settings", "current_rotaract_year")
 
 	def on_submit(self):
-		self.validate_account()
-		self.validate_reporting_access()
-		frappe.db.set_value('Project', self.name, 'document_status', 'submitted')
+		frappe.db.set_value('Council Project', self.name, 'document_status', 'submitted')
 
 	def on_cancel(self):
-		frappe.db.set_value('Project', self.name, 'document_status', 'cancelled')
+		frappe.db.set_value('Council Project', self.name, 'document_status', 'cancelled')
 
 	def set_status(self):
 		self.time_stamp = now()
 		self.reporting_month = getdate(self.end_time).strftime("%B")
 		d = add_months(getdate(self.end_time), 1)
 		early = frappe.db.get_single_value("Pranali Settings", "early_reporting_days")
-		reporting_deadline = frappe.db.get_single_value("Pranali Settings", "reporting_deadline")
+		reporting_deadline = frappe.db.get_single_value("Pranali Settings", "reporting_deadline") + 5
 		deadline = cstr(getdate(d).strftime("%Y")) + "-" + cstr(getdate(d).strftime("%m")) + "-" + cstr(reporting_deadline)
 		if getdate(self.time_stamp) > getdate(deadline):
 			self.project_status = "Late"

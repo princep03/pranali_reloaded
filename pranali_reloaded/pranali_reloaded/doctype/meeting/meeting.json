@@ -290,7 +290,7 @@
   {
    "depends_on": "eval: in_list([\"Sister Club Meet\",\"Twin Club Meet\",\"Other Districts\",'Joint GBM'], doc.type_of_meeting)",
    "fieldname": "president_contact",
-   "fieldtype": "Int",
+   "fieldtype": "Data",
    "label": "President's Contact"
   },
   {
@@ -315,7 +315,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-09-27 12:42:53.643514",
+ "modified": "2021-10-07 00:12:44.506855",
  "modified_by": "Administrator",
  "module": "Pranali Reloaded",
  "name": "Meeting",

@@ -3,12 +3,15 @@
 # For license information, please see license.txt
 
 from __future__ import unicode_literals
+from warnings import filters
 import frappe
-from frappe.utils import now
+from frappe.utils import cint, cstr, now, getdate, add_months, add_days
 from frappe.model.document import Document
+
 
 class PISInteraction(Document):
 	def validate(self):
+		self.set_status()
 		self.set_zone()
 		self.document_status='draft'
 		self.check_duplicates()
@@ -21,6 +24,29 @@ class PISInteraction(Document):
 
 	def on_cancel(self):
 		frappe.db.set_value('PIS Interaction', self.name, 'document_status', 'cancelled')
+
+	def set_status(self):
+		self.time_stamp = now()
+		self.reporting_month = getdate(self.end_time).strftime("%B")
+		d = add_months(getdate(self.end_time), 1)
+		early = frappe.db.get_single_value("Pranali Settings", "early_reporting_days")
+		reporting_deadline = frappe.db.get_single_value("Pranali Settings", "reporting_deadline")
+		deadline = cstr(getdate(d).strftime("%Y")) + "-" + cstr(getdate(d).strftime("%m")) + "-" + cstr(reporting_deadline)
+		if getdate(self.time_stamp) > getdate(deadline):
+			self.reporting_status = "Late"
+		elif early > 0 and getdate(self.time_stamp) <= getdate(add_days(getdate(self.end_time), early)):
+			self.reporting_status = "Early"
+		else:
+			self.reporting_status = "On Time"
+
+		if self.reporting_month in ["July", "August", "September"]:
+			self.quarter = "One"
+		elif self.reporting_month in ["October", "November", "December"]:
+			self.quarter = "Two"
+		elif self.reporting_month in ["January", "February", "March"]:
+			self.quarter = "Three"
+		elif self.reporting_month in ["April", "May", "June"]:
+			self.quarter = "Four"
 
 	def set_zone(self):
 		self.zone = frappe.db.get_value("Club", self.club, "zone")

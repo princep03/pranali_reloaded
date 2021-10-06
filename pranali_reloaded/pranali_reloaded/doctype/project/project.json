@@ -273,6 +273,7 @@
   },
   {
    "bold": 1,
+   "default": "0",
    "fieldname": "incomes",
    "fieldtype": "Int",
    "label": "Income"
@@ -499,7 +500,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-09-27 12:43:45.725247",
+ "modified": "2021-10-07 00:39:43.111307",
  "modified_by": "Administrator",
  "module": "Pranali Reloaded",
  "name": "Project",
