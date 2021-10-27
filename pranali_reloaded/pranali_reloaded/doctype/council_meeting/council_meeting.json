@@ -28,7 +28,6 @@
   "dcm_attendees",
   "rotarians",
   "guest",
-  "percentage_attendance",
   "column_break_10",
   "club_rotaractors",
   "alumini",
@@ -37,8 +36,6 @@
   "section_break_4",
   "team",
   "rotaract_year",
-  "column_break_4",
-  "zone",
   "section_break_6",
   "document_status",
   "amended_from"
@@ -180,12 +177,6 @@
    "label": "Guest"
   },
   {
-   "fieldname": "percentage_attendance",
-   "fieldtype": "Percent",
-   "label": "Percentage Attendance",
-   "read_only": 1
-  },
-  {
    "fieldname": "column_break_10",
    "fieldtype": "Column Break"
   },
@@ -227,19 +218,6 @@
    "read_only": 1
   },
   {
-   "fieldname": "column_break_4",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "zone",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Zone",
-   "options": "Zone",
-   "read_only": 1
-  },
-  {
    "fieldname": "section_break_6",
    "fieldtype": "Section Break"
   },
@@ -278,7 +256,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-10-07 01:02:06.809673",
+ "modified": "2021-10-27 23:33:51.462991",
  "modified_by": "Administrator",
  "module": "Pranali Reloaded",
  "name": "Council Meeting",

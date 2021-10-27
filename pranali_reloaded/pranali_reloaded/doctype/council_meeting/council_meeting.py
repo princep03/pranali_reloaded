@@ -13,7 +13,6 @@ class CouncilMeeting(Document):
 		self.document_status='draft'
 		self.reporting_month = getdate(self.date).strftime("%B")
 		self.rotaract_year = frappe.db.get_single_value("Pranali Settings", "current_rotaract_year")
-		self.set_attendance_percentage()
 
 	def on_submit(self):
 		frappe.db.set_value('Meeting', self.name, 'document_status', 'submitted')
