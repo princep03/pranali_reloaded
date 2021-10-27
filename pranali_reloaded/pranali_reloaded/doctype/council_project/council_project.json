@@ -67,8 +67,7 @@
   "team",
   "rotaract_year",
   "column_break_4",
-  "document_status",
-  "amended_from"
+  "document_status"
  ],
  "fields": [
   {
@@ -379,24 +378,6 @@
    "read_only": 1
   },
   {
-   "fieldname": "amended_from",
-   "fieldtype": "Link",
-   "label": "Amended From",
-   "no_copy": 1,
-   "options": "Council Project",
-   "print_hide": 1,
-   "read_only": 1
-  },
-  {
-   "fieldname": "amended_from",
-   "fieldtype": "Link",
-   "label": "Amended From",
-   "no_copy": 1,
-   "options": "Council Project",
-   "print_hide": 1,
-   "read_only": 1
-  },
-  {
    "fieldname": "avenue",
    "fieldtype": "Link",
    "in_list_view": 1,
@@ -438,7 +419,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-10-07 01:03:16.754416",
+ "modified": "2021-10-27 23:48:35.411307",
  "modified_by": "Administrator",
  "module": "Pranali Reloaded",
  "name": "Council Project",
