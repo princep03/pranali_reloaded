@@ -16,3 +16,4 @@ recursive-include pranali_reloaded *.py
 recursive-include pranali_reloaded *.svg
 recursive-include pranali_reloaded *.txt
 recursive-exclude pranali_reloaded *.pyc
+.
