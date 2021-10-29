@@ -2,7 +2,7 @@
 
 A ERP system for Rotaract District Organisations build using the [Frappé Framework](https://frappeframework.com/)!
 
-![Screenshot of the Pranali Reloaded Dashboard](.github/pranali_desk.png)
+![Screenshot of the Pranali Reloaded Dashboard](.github/TRS_Desk.png)
 
 #### Set-up
 
