@@ -26,4 +26,4 @@ To learn more about Frappe, consult their [documentation](https://frappe.io/docs
 
 GNU General Public License v3
 
-Made with ❤️  for Rotaract District Organisations
+Made with ❤️ for Rotaract District Organisation, RID 3141
