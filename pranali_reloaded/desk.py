@@ -29,6 +29,13 @@ def set_desktop_icons():
 				"link": '#List/Member/List'
 			},
 			{
+				"label": _('Receipt'),
+				"icon": "octicon octicon-clippy",
+				"type": 'doctype',
+				"name": 'Receipt',
+				"link": '#List/Receipt/List'
+			},
+			{
 				"label": _('OCV'),
 				"icon": "octicon octicon-book",
 				"type": 'doctype',
@@ -36,12 +43,13 @@ def set_desktop_icons():
 				"link": '#List/OCV/List'
 			},
 			{
-				"label": _('Receipt'),
-				"icon": "octicon octicon-clippy",
+				"label": _('OCV Documents'),
+				"icon": "octicon octicon-file",
 				"type": 'doctype',
-				"name": 'Receipt',
-				"link": '#List/Receipt/List'
+				"name": 'OCV Documents',
+				"link": '#List/OCV Documents/List'
 			}
+			
 		],
 		"Reporting": [
 			{
