@@ -44,7 +44,7 @@ def set_desktop_icons():
 			},
 			{
 				"label": _('OCV Documents'),
-				"icon": "octicon octicon-file",
+				"icon": "octicon octicon-briefcase",
 				"type": 'doctype',
 				"name": 'OCV Documents',
 				"link": '#List/OCV Documents/List'

@@ -73,7 +73,7 @@
    "default": "0",
    "fieldname": "website",
    "fieldtype": "Int",
-   "label": "Club Website & Social Media updated"
+   "label": "Club Website Updated"
   },
   {
    "default": "0",
@@ -139,7 +139,7 @@
  ],
  "issingle": 1,
  "links": [],
- "modified": "2021-11-02 16:47:46.949794",
+ "modified": "2021-11-03 01:34:59.450114",
  "modified_by": "Administrator",
  "module": "Pranali Reloaded",
  "name": "OCV Points Configuration",

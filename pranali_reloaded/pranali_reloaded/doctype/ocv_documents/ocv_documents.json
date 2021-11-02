@@ -71,24 +71,28 @@
    "label": "Documents"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "minutes_book",
    "fieldtype": "Attach",
    "label": "Minutes Book Signed & Updated",
    "reqd": 1
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "attendance_muster",
    "fieldtype": "Attach",
    "label": "Attendance Muster Signed & Updated",
    "reqd": 1
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "club_roster",
    "fieldtype": "Attach",
    "label": "Club Roster/Membership File Updated",
    "reqd": 1
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "bye_laws",
    "fieldtype": "Attach",
    "label": "Updated Club Bye Laws",
@@ -102,24 +106,28 @@
    "reqd": 1
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "bye_laws_minutes",
    "fieldtype": "Attach",
    "label": "Minutes of the Meeting where the Bye Laws had been Read, Signed and/or Amended",
    "reqd": 1
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "financials",
    "fieldtype": "Attach",
    "label": "Updated Club Financials",
    "reqd": 1
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "avenue_files",
    "fieldtype": "Attach",
    "label": "Avenue Based Files",
    "reqd": 1
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "saa_file",
    "fieldtype": "Attach",
    "label": "SAA File",
@@ -214,7 +222,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-11-03 00:29:50.630293",
+ "modified": "2021-11-03 01:34:16.171699",
  "modified_by": "Administrator",
  "module": "Pranali Reloaded",
  "name": "OCV Documents",
@@ -222,6 +230,8 @@
  "owner": "Administrator",
  "permissions": [
   {
+   "amend": 1,
+   "cancel": 1,
    "create": 1,
    "delete": 1,
    "email": 1,
