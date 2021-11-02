@@ -1,4 +1,5 @@
 {
+ "actions": [],
  "autoname": "OCV.###",
  "creation": "2016-10-29 22:32:48.035930",
  "doctype": "DocType",
@@ -17,13 +18,15 @@
   "saa",
   "minutes",
   "attendance",
+  "avenue_files",
   "column_break_11",
   "banner",
-  "rooster",
+  "roster",
   "website",
-  "membership",
   "bye_laws",
+  "bye_laws_minutes",
   "finance",
+  "saa_files",
   "section_break_5",
   "points",
   "percentage_points_earned",
@@ -53,67 +56,55 @@
    "default": "0",
    "fieldname": "gavel",
    "fieldtype": "Check",
-   "label": "Is the gavel and gong present?"
+   "label": "Gavel & Gong"
   },
   {
    "default": "0",
    "fieldname": "charter",
    "fieldtype": "Check",
-   "label": "Is the club charter present?"
+   "label": "Club Charter"
   },
   {
    "default": "0",
    "fieldname": "collar",
    "fieldtype": "Check",
-   "label": "Is the collar present?"
+   "label": "President Collar"
   },
   {
    "default": "0",
    "fieldname": "saa",
    "fieldtype": "Check",
-   "label": "Is the SAA badge & arm band present?"
+   "label": "SAA Arm Band"
   },
   {
    "default": "0",
    "fieldname": "minutes",
    "fieldtype": "Check",
-   "label": "Is the updated minutes book available?"
+   "label": "Minutes Book Signed & Updated"
   },
   {
    "default": "0",
    "fieldname": "attendance",
    "fieldtype": "Check",
-   "label": "Is the updated attendance muster available?"
+   "label": "Attendance Muster Signed & Updated"
   },
   {
    "default": "0",
    "fieldname": "banner",
    "fieldtype": "Check",
-   "label": "Is the club banner present?"
-  },
-  {
-   "default": "0",
-   "fieldname": "rooster",
-   "fieldtype": "Check",
-   "label": "Is the club roster available?"
+   "label": "Club Banner"
   },
   {
    "default": "0",
    "fieldname": "website",
    "fieldtype": "Check",
-   "label": "Is the club website & social media updated regularly?"
-  },
-  {
-   "default": "0",
-   "fieldname": "membership",
-   "fieldtype": "Check",
-   "label": "Is the club membership file present?"
+   "label": "Club Website & Social Media updated"
   },
   {
    "default": "0",
    "fieldname": "bye_laws",
    "fieldtype": "Check",
-   "label": "Is the updated club bye laws present?"
+   "label": "Updated Club Bye-Laws"
   },
   {
    "default": "0",
@@ -172,14 +163,40 @@
    "label": "Rotaract Year",
    "options": "Rotaract Year",
    "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "avenue_files",
+   "fieldtype": "Check",
+   "label": "Avenue Based Files"
+  },
+  {
+   "default": "0",
+   "fieldname": "roster",
+   "fieldtype": "Check",
+   "label": "Club Roster/Membership File Updated"
+  },
+  {
+   "default": "0",
+   "fieldname": "bye_laws_minutes",
+   "fieldtype": "Check",
+   "label": "Minutes of the Meeting attached separately where the Bye Laws had been Read, Signed and/or Amended"
+  },
+  {
+   "default": "0",
+   "fieldname": "saa_files",
+   "fieldtype": "Check",
+   "label": "SAA Files"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
- "modified": "2021-04-26 00:06:45.985016",
+ "links": [],
+ "modified": "2021-11-02 16:47:15.295515",
  "modified_by": "Administrator",
  "module": "Pranali Reloaded",
  "name": "OCV",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {

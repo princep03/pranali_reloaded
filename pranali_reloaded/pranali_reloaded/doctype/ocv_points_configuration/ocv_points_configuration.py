@@ -8,8 +8,8 @@ from frappe.model.document import Document
 
 class OCVPointsConfiguration(Document):
 	def validate(self):
-		rules = ['gavel', 'charter', 'collar', 'saa', 'minutes', 'attendance', 
-			'banner', 'rooster', 'website', 'membership', 'bye_laws', 'finance', 'additional_points']
+		rules = ['gavel', 'charter', 'collar', 'saa', 'minutes', 'attendance', 'avenue_files',
+			'banner', 'roster', 'website', 'bye_laws', 'bye_laws_minutes', 'finance', 'saa_files', 'additional_points']
 		
 		self.max_points = 0
 

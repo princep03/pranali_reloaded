@@ -1,4 +1,5 @@
 {
+ "actions": [],
  "creation": "2020-12-08 01:29:37.229870",
  "doctype": "DocType",
  "document_type": "Document",
@@ -11,14 +12,16 @@
   "saa",
   "minutes",
   "attendance",
+  "avenue_files",
   "cut_off_date",
   "column_break_7",
   "banner",
-  "rooster",
+  "roster",
   "website",
-  "membership",
   "bye_laws",
+  "bye_laws_minutes",
   "finance",
+  "saa_files",
   "additional_points",
   "section_break_16",
   "max_points"
@@ -28,73 +31,61 @@
    "default": "0",
    "fieldname": "gavel",
    "fieldtype": "Int",
-   "label": "Is the gavel & gong present ?"
+   "label": "Gavel & Gong"
   },
   {
    "default": "0",
    "fieldname": "charter",
    "fieldtype": "Int",
-   "label": "Is the club charter present ?"
+   "label": "Club Charter"
   },
   {
    "default": "0",
    "fieldname": "collar",
    "fieldtype": "Int",
-   "label": "Is the collar present ?"
+   "label": "President Collar"
   },
   {
    "default": "0",
    "fieldname": "saa",
    "fieldtype": "Int",
-   "label": "Is the SAA badge & arm band present ?"
+   "label": "SAA Arm Band"
   },
   {
    "default": "0",
    "fieldname": "minutes",
    "fieldtype": "Int",
-   "label": "Is the updated minutes book available ? "
+   "label": "Minutes Book Signed & Updated"
   },
   {
    "default": "0",
    "fieldname": "attendance",
    "fieldtype": "Int",
-   "label": "Is the updated attendance muster available ?"
+   "label": "Attendance Muster Signed & Updated"
   },
   {
    "default": "0",
    "fieldname": "banner",
    "fieldtype": "Int",
-   "label": "Is the club banner present ?"
-  },
-  {
-   "default": "0",
-   "fieldname": "rooster",
-   "fieldtype": "Int",
-   "label": "Is the club roster available ?"
+   "label": "Club Banner"
   },
   {
    "default": "0",
    "fieldname": "website",
    "fieldtype": "Int",
-   "label": "Is the club website & social media updated regularly ?"
-  },
-  {
-   "default": "0",
-   "fieldname": "membership",
-   "fieldtype": "Int",
-   "label": "Is the club membership file present ?"
+   "label": "Club Website & Social Media updated"
   },
   {
    "default": "0",
    "fieldname": "bye_laws",
    "fieldtype": "Int",
-   "label": "Is the updated club bye laws present ?"
+   "label": "Updated Club Bye-Laws"
   },
   {
    "default": "0",
    "fieldname": "finance",
    "fieldtype": "Int",
-   "label": "Are the club financial records available and acknowledged by parent Rotary ?"
+   "label": "Club Financials [Updated]"
   },
   {
    "fieldname": "column_break_7",
@@ -119,10 +110,36 @@
    "fieldtype": "Int",
    "label": "Max Points",
    "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "avenue_files",
+   "fieldtype": "Int",
+   "label": "Avenue Based Files"
+  },
+  {
+   "default": "0",
+   "fieldname": "bye_laws_minutes",
+   "fieldtype": "Int",
+   "label": "Minutes of the Meeting attached separately where the Bye Laws had been Read, Signed and/or Amended"
+  },
+  {
+   "default": "0",
+   "fieldname": "saa_files",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "SAA Files"
+  },
+  {
+   "default": "0",
+   "fieldname": "roster",
+   "fieldtype": "Int",
+   "label": "Club Roster/Membership File Updated"
   }
  ],
  "issingle": 1,
- "modified": "2020-12-08 14:19:52.779901",
+ "links": [],
+ "modified": "2021-11-02 16:47:46.949794",
  "modified_by": "Administrator",
  "module": "Pranali Reloaded",
  "name": "OCV Points Configuration",
