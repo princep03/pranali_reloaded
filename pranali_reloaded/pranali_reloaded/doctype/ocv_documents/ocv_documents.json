@@ -1,0 +1,267 @@
+{
+ "actions": [],
+ "autoname": "OCVDOC.####",
+ "creation": "2021-11-02 21:58:58.710557",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "club_details_section",
+  "club",
+  "column_break_2",
+  "zone",
+  "section_break_2",
+  "ocv_date",
+  "section_break_7",
+  "time_stamp",
+  "column_break_3",
+  "submission_status",
+  "documents_section",
+  "minutes_book",
+  "attendance_muster",
+  "club_roster",
+  "avenue_files",
+  "financials",
+  "column_break_13",
+  "bye_laws",
+  "bye_laws_minutes",
+  "website",
+  "saa_file",
+  "member_nominations_section",
+  "members",
+  "rotaract_year_section",
+  "rotaract_year",
+  "section_break_26",
+  "document_status",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "bold": 1,
+   "fieldname": "club",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Club",
+   "options": "Club",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "OCV Documents",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "ocv_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "OCV Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "documents_section",
+   "fieldtype": "Section Break",
+   "label": "Documents"
+  },
+  {
+   "fieldname": "minutes_book",
+   "fieldtype": "Attach",
+   "label": "Minutes Book Signed & Updated",
+   "reqd": 1
+  },
+  {
+   "fieldname": "attendance_muster",
+   "fieldtype": "Attach",
+   "label": "Attendance Muster Signed & Updated",
+   "reqd": 1
+  },
+  {
+   "fieldname": "club_roster",
+   "fieldtype": "Attach",
+   "label": "Club Roster/Membership File Updated",
+   "reqd": 1
+  },
+  {
+   "fieldname": "bye_laws",
+   "fieldtype": "Attach",
+   "label": "Updated Club Bye Laws",
+   "reqd": 1
+  },
+  {
+   "fieldname": "website",
+   "fieldtype": "Data",
+   "label": "Updated Club Website",
+   "options": "URL",
+   "reqd": 1
+  },
+  {
+   "fieldname": "bye_laws_minutes",
+   "fieldtype": "Attach",
+   "label": "Minutes of the Meeting where the Bye Laws had been Read, Signed and/or Amended",
+   "reqd": 1
+  },
+  {
+   "fieldname": "financials",
+   "fieldtype": "Attach",
+   "label": "Updated Club Financials",
+   "reqd": 1
+  },
+  {
+   "fieldname": "avenue_files",
+   "fieldtype": "Attach",
+   "label": "Avenue Based Files",
+   "reqd": 1
+  },
+  {
+   "fieldname": "saa_file",
+   "fieldtype": "Attach",
+   "label": "SAA File",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "member_nominations_section",
+   "fieldtype": "Section Break",
+   "label": "Member Nominations"
+  },
+  {
+   "fieldname": "members",
+   "fieldtype": "Table",
+   "label": "Nominate 15-20 club members for Certificate of Appreciation from DRR",
+   "options": "OCV Member Nominations",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "now",
+   "fieldname": "time_stamp",
+   "fieldtype": "Data",
+   "label": "Time Stamp",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break",
+   "label": "OCV Date"
+  },
+  {
+   "fieldname": "rotaract_year_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "rotaract_year",
+   "fieldtype": "Link",
+   "label": "Rotaract Year",
+   "options": "Rotaract Year"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "bold": 1,
+   "fieldname": "zone",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Zone",
+   "options": "Zone",
+   "reqd": 1
+  },
+  {
+   "fieldname": "club_details_section",
+   "fieldtype": "Section Break",
+   "label": "Club Details"
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "submission_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Submission Status",
+   "options": "\nOn Time\nLate",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_26",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "document_status",
+   "fieldtype": "Link",
+   "label": "Document Status",
+   "options": "Document Status",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2021-11-03 00:29:50.630293",
+ "modified_by": "Administrator",
+ "module": "Pranali Reloaded",
+ "name": "OCV Documents",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Club Member - Full Access",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "club"
+}
