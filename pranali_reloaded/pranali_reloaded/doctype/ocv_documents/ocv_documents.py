@@ -9,9 +9,9 @@ from frappe.utils.data import today
 
 class OCVDocuments(Document):
 	def validate(self):
+		self.set_zone()
 		self.set_status()
 		self.document_status='draft'
-		self.set_zone()
 		self.rotaract_year = frappe.db.get_single_value("Pranali Settings", "current_rotaract_year")
 
 	def on_submit(self):
@@ -27,11 +27,9 @@ class OCVDocuments(Document):
 		self.today = datetime.date.today()
 		self.date = datetime.datetime.strptime(self.ocv_date,'%Y-%m-%d').date()
 		if (self.date - self.today).days >= 15:
-			self.submission_status = "On Time"
-		
+			self.submission_status = "On Time"	
 		else:
 			self.submission_status = "Late"
-
 	
 	def set_zone(self):
 		self.zone = frappe.db.get_value("Club", self.club, "zone")

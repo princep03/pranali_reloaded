@@ -13,15 +13,16 @@
   "minutes",
   "attendance",
   "avenue_files",
+  "saa_files",
   "cut_off_date",
   "column_break_7",
   "banner",
   "roster",
+  "membership",
   "website",
   "bye_laws",
   "bye_laws_minutes",
   "finance",
-  "saa_files",
   "additional_points",
   "section_break_16",
   "max_points"
@@ -134,12 +135,18 @@
    "default": "0",
    "fieldname": "roster",
    "fieldtype": "Int",
-   "label": "Club Roster/Membership File Updated"
+   "label": "Club Roster/Directory Updated"
+  },
+  {
+   "default": "0",
+   "fieldname": "membership",
+   "fieldtype": "Int",
+   "label": "Membership File Updated"
   }
  ],
  "issingle": 1,
  "links": [],
- "modified": "2021-11-03 01:34:59.450114",
+ "modified": "2021-11-03 12:18:51.607473",
  "modified_by": "Administrator",
  "module": "Pranali Reloaded",
  "name": "OCV Points Configuration",

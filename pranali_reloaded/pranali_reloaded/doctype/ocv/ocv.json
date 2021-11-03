@@ -10,7 +10,6 @@
   "club",
   "column_break_3",
   "ocv_date",
-  "amended_from",
   "section_break_10",
   "gavel",
   "charter",
@@ -19,17 +18,19 @@
   "minutes",
   "attendance",
   "avenue_files",
+  "saa_files",
   "column_break_11",
   "banner",
   "roster",
+  "membership",
   "website",
   "bye_laws",
   "bye_laws_minutes",
   "finance",
-  "saa_files",
   "section_break_5",
   "points",
   "percentage_points_earned",
+  "amended_from",
   "column_break_8",
   "max_points",
   "rotaract_year"
@@ -174,7 +175,7 @@
    "default": "0",
    "fieldname": "roster",
    "fieldtype": "Check",
-   "label": "Club Roster/Membership File Updated"
+   "label": "Club Roster/Directory Updated"
   },
   {
    "default": "0",
@@ -187,12 +188,18 @@
    "fieldname": "saa_files",
    "fieldtype": "Check",
    "label": "SAA Files"
+  },
+  {
+   "default": "0",
+   "fieldname": "membership",
+   "fieldtype": "Check",
+   "label": "Membership File Updated"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2021-11-03 01:35:52.877502",
+ "modified": "2021-11-03 12:26:07.045297",
  "modified_by": "Administrator",
  "module": "Pranali Reloaded",
  "name": "OCV",

@@ -19,8 +19,8 @@ class OCV(Document):
 			frappe.throw("OCV Record is already created for Club {0}. <a href='/desk#Form/OCV/{1}'>Please cancel {1} to proceed.</a>".format(self.club, self.existing_ocv[0].get('name')))
 
 	def set_points(self):
-		rules = ['gavel', 'charter', 'collar', 'saa', 'minutes', 'attendance', 'avenue_files',
-			'banner', 'roster', 'website', 'bye_laws', 'bye_laws_minutes', 'finance', 'saa_files', 'additional_points']
+		rules = ['gavel', 'charter', 'collar', 'saa', 'minutes', 'attendance', 'avenue_files', 'saa_files',
+			'banner', 'roster', 'membership', 'website', 'bye_laws', 'bye_laws_minutes', 'finance', 'additional_points']
 		
 		rule_points = frappe.get_single("OCV Points Configuration")
 		self.max_points = rule_points.max_points
