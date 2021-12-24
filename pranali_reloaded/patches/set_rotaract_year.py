@@ -9,9 +9,9 @@ def execute():
     frappe.reload_doc('pranali_reloaded', 'doctype', 'Ambassadorial Report', force=True)
 
 
-    frappe.db.sql("update `tabReceipt` set rotaract_year='2020-21'")
-    frappe.db.sql("update `tabOCV` set rotaract_year='2020-21'")
-    frappe.db.sql("update `tabAARA Nomination` set rotaract_year='2020-21'")
-    frappe.db.sql("update `tabProject` set rotaract_year='2020-21'")
-    frappe.db.sql("update `tabMeeting` set rotaract_year='2020-21'")
-    frappe.db.sql("update `tabAmbassadorial Report` set rotaract_year='2020-21'")
+    frappe.db.sql("update `tabReceipt` set rotaract_year='2021-22'")
+    frappe.db.sql("update `tabOCV` set rotaract_year='2021-22'")
+    frappe.db.sql("update `tabAARA Nomination` set rotaract_year='2021-22'")
+    frappe.db.sql("update `tabProject` set rotaract_year='2021-22'")
+    frappe.db.sql("update `tabMeeting` set rotaract_year='2021-22'")
+    frappe.db.sql("update `tabAmbassadorial Report` set rotaract_year='2021-22'")

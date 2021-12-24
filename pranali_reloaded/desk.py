@@ -1,10 +1,10 @@
 app_name = "pranali_reloaded"
 app_title = "Pranali Reloaded"
-app_publisher = "Rtr.Neil Trini Lasrado"
+app_publisher = "Rotaract District 3141"
 app_description = "a reporting system for Rotaract District Organization"
 app_icon = "octicon .octicon-organization"
 app_color = "grey"
-app_email = "neil@rotaractsuncity.in"
+app_email = "rotaractdistrict3141@gmail.com"
 app_version = "0.0.1"
 
 import frappe

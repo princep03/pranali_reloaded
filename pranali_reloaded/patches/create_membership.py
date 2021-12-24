@@ -11,13 +11,13 @@ def execute():
     for club in frappe.get_all("Club"):
         frappe.get_doc("Club", club.name).save()
     
-    if not frappe.db.exists("Rotaract Year", "2020-21"):
+    if not frappe.db.exists("Rotaract Year", "2021-22"):
         frappe.new_doc("Rotaract Year").update({
             "year": "2020-21",
-            "start_date": getdate("01-07-2020"),
-            "end_date": getdate("30-06-2021")
+            "start_date": getdate("01-07-2021"),
+            "end_date": getdate("30-06-2022")
         }).save()
-    frappe.db.set_value("Pranali Settings", "", "current_rotaract_year", "2020-21")
+    frappe.db.set_value("Pranali Settings", "", "current_rotaract_year", "2021-22")
    
     for member in frappe.get_all("Member"):
         pay_dues(member.name)

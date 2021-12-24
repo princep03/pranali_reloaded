@@ -77,10 +77,10 @@ export default {
 @import "frappe/public/less/variables";
 
 .module-box {
-  border-radius: 4px;
+  border-radius: 10px;
   padding: 5px 15px;
   display: block;
-  background-color: #ffffff;
+  background-color: white;
 }
 
 .module-box.sortable-chosen {
@@ -127,6 +127,7 @@ export default {
   padding-bottom: 5px;
   text-decoration: none;
   --moz-text-decoration-line: none;
+  color: black;
 }
 
 .icon-box {
