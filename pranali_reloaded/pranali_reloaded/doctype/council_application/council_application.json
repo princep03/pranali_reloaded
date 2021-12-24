@@ -41,6 +41,8 @@
   "reason2",
   "unique_avenue2",
   "section_break_35",
+  "cp_projects",
+  "section_break36",
   "project_select1",
   "column_break_35",
   "project_select2",
@@ -53,10 +55,11 @@
   "motivation",
   "noc_section",
   "noc",
+  "attach_noc",
   "president_name",
   "president_designation",
   "cetify",
-  "date_submission"
+  "timestamp"
  ],
  "fields": [
   {
@@ -205,14 +208,14 @@
    "fieldname": "avenue_preference1",
    "fieldtype": "Select",
    "label": "Avenue Preference 1",
-   "options": "Secretariat\nAdministration\nFinance\nHuman Resource Development\nZones\nPublic Relations & marketing\nClub Service\nSports\nCommunity Service\nInternational Service\nProfessional Development\nEntrepreneurship Development\nPartners in Service\nPublications\nDigital Communications\nSocial Media Management\nWeb Development\nMedia Productions",
+   "options": "Secretariat\nAdministration\nFinance\nClub Service\nSports\nCommunity Service\nInternational Service\nProfessional Development\nEntrepreneurship Development\nPartners in Service\nHuman Resource Development\nZones\nPublic Relations & marketing\nPublications\nDigital Communications\nSocial Media Management\nWeb Development\nMedia Productions\nRotary-Rotaract Project Committee",
    "reqd": 1
   },
   {
    "fieldname": "designation1",
    "fieldtype": "Select",
    "label": "Which Designation are you applying for",
-   "options": "Director\nJoint Director\nZonal Rotaract Representative",
+   "options": "Director\nJoint Director\nZonal Rotaract Representative\nCommittee Member",
    "reqd": 1
   },
   {
@@ -235,14 +238,14 @@
    "fieldname": "avenue_preference2",
    "fieldtype": "Select",
    "label": "Avenue Preference 2",
-   "options": "Secretariat\nAdministration\nFinance\nHuman Resource Development\nZones\nPublic Relations & marketing\nClub Service\nSports\nCommunity Service\nInternational Service\nProfessional Development\nEntrepreneurship Development\nPartners in Service\nPublications\nDigital Communications\nSocial Media Management\nWeb Development\nMedia Productions",
+   "options": "Secretariat\nAdministration\nFinance\nClub Service\nSports\nCommunity Service\nInternational Service\nProfessional Development\nEntrepreneurship Development\nPartners in Service\nHuman Resource Development\nZones\nPublic Relations & marketing\nPublications\nDigital Communications\nSocial Media Management\nWeb Development\nMedia Productions\nRotary-Rotaract Project Committee",
    "reqd": 1
   },
   {
    "fieldname": "designation2",
    "fieldtype": "Select",
    "label": "Which Designation are you applying for",
-   "options": "Director\nJoint Director\nZonal Rotaract Representative",
+   "options": "Director\nJoint Director\nZonal Rotaract Representative\nCommittee Member",
    "reqd": 1
   },
   {
@@ -259,8 +262,7 @@
   },
   {
    "fieldname": "section_break_35",
-   "fieldtype": "Section Break",
-   "label": "Tell us 2 Projects you wish to be a chairperson for?"
+   "fieldtype": "Section Break"
   },
   {
    "fieldname": "project_select1",
@@ -352,15 +354,33 @@
    "reqd": 1
   },
   {
-   "fieldname": "date_submission",
-   "fieldtype": "Date",
-   "label": "Date of Submission",
-   "options": "today"
+   "fieldname": "attach_noc",
+   "fieldtype": "Attach",
+   "label": "Attach No Objection Certificate",
+   "reqd": 1
+  },
+  {
+   "default": "now",
+   "fieldname": "timestamp",
+   "fieldtype": "Data",
+   "label": "Timestamp",
+   "read_only": 1
+  },
+  {
+   "default": ".",
+   "fieldname": "cp_projects",
+   "fieldtype": "Data",
+   "label": "Tell us 2 Projects you wish to be a chairperson for?",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break36",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-12-23 17:53:03.618037",
+ "modified": "2021-12-25 03:53:56.109188",
  "modified_by": "Administrator",
  "module": "Pranali Reloaded",
  "name": "Council Application",
