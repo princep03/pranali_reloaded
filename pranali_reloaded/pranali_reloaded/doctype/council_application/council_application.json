@@ -1,6 +1,5 @@
 {
  "actions": [],
- "allow_copy": 1,
  "autoname": "APPL.####",
  "creation": "2021-12-22 00:01:45.754294",
  "default_email_template": "Council Application",
@@ -56,10 +55,13 @@
   "noc_section",
   "noc",
   "attach_noc",
+  "signature_of_the_president",
   "president_name",
   "president_designation",
   "cetify",
-  "timestamp"
+  "signature_of_the_applicant",
+  "timestamp",
+  "amended_from"
  ],
  "fields": [
   {
@@ -363,7 +365,7 @@
    "default": "now",
    "fieldname": "timestamp",
    "fieldtype": "Data",
-   "label": "Timestamp",
+   "label": "Date of Submission",
    "read_only": 1
   },
   {
@@ -376,11 +378,34 @@
   {
    "fieldname": "section_break36",
    "fieldtype": "Section Break"
+  },
+  {
+   "default": "\n\n\n____________________________",
+   "fieldname": "signature_of_the_president",
+   "fieldtype": "Small Text",
+   "label": "SIgnature of the President",
+   "read_only": 1
+  },
+  {
+   "default": "\n\n\n\n____________________________",
+   "fieldname": "signature_of_the_applicant",
+   "fieldtype": "Small Text",
+   "label": "Signature of the Applicant",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Council Application",
+   "print_hide": 1,
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-12-25 03:53:56.109188",
+ "modified": "2021-12-25 16:43:33.185105",
  "modified_by": "Administrator",
  "module": "Pranali Reloaded",
  "name": "Council Application",
