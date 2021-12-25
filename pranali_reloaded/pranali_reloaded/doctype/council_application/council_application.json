@@ -1,6 +1,6 @@
 {
  "actions": [],
- "autoname": "APPL.####",
+ "autoname": "format:{applicant_name}-{home_club}-{###}",
  "creation": "2021-12-22 00:01:45.754294",
  "default_email_template": "Council Application",
  "doctype": "DocType",
@@ -22,7 +22,8 @@
   "zone",
   "number_of_rotaractyears",
   "earlier_home_club",
-  "club_ri_21_22",
+  "club_change",
+  "attach_noc",
   "strengths",
   "weakness",
   "column_break_14",
@@ -54,7 +55,6 @@
   "motivation",
   "noc_section",
   "noc",
-  "attach_noc",
   "signature_of_the_president",
   "president_name",
   "president_designation",
@@ -71,13 +71,15 @@
    "in_list_view": 1,
    "label": "Email Id of the Applicant",
    "options": "Email",
-   "reqd": 1
+   "reqd": 1,
+   "set_only_once": 1
   },
   {
    "fieldname": "contact",
    "fieldtype": "Data",
    "label": "Contact Number of the Applicant",
-   "reqd": 1
+   "reqd": 1,
+   "set_only_once": 1
   },
   {
    "description": "Do not mention Rtr.",
@@ -86,7 +88,8 @@
    "in_list_view": 1,
    "label": "Full Name of the Applicant",
    "options": "Name",
-   "reqd": 1
+   "reqd": 1,
+   "set_only_once": 1
   },
   {
    "fieldname": "personal_information_section",
@@ -97,7 +100,8 @@
    "fieldname": "dob",
    "fieldtype": "Date",
    "label": "Date of Birth",
-   "reqd": 1
+   "reqd": 1,
+   "set_only_once": 1
   },
   {
    "fieldname": "column_break_6",
@@ -108,14 +112,16 @@
    "fieldtype": "Select",
    "label": "Gender",
    "options": "Male\nFemale\nPrefer not to say",
-   "reqd": 1
+   "reqd": 1,
+   "set_only_once": 1
   },
   {
    "fieldname": "status_ri",
    "fieldtype": "Select",
    "label": "Status for the RI year 2022-23",
    "options": "Student\nWorking\nBoth\nSabbatical or Break",
-   "reqd": 1
+   "reqd": 1,
+   "set_only_once": 1
   },
   {
    "fieldname": "formal_pic",
@@ -126,7 +132,7 @@
   {
    "fieldname": "resume",
    "fieldtype": "Attach",
-   "label": "Updated Resume",
+   "label": "Upload Updated Resume",
    "reqd": 1
   },
   {
@@ -138,68 +144,74 @@
   {
    "fieldname": "home_club",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Home Club of the Applicant for the year 21-22(Current Year's Rotaract Club)",
    "options": "Club",
-   "reqd": 1
+   "reqd": 1,
+   "set_only_once": 1
   },
   {
    "fieldname": "zone",
    "fieldtype": "Link",
+   "in_standard_filter": 1,
    "label": "Zone",
    "options": "Zone",
-   "reqd": 1
+   "reqd": 1,
+   "set_only_once": 1
   },
   {
    "fieldname": "number_of_rotaractyears",
    "fieldtype": "Int",
    "label": "Total number of years in Rotaract",
-   "reqd": 1
+   "reqd": 1,
+   "set_only_once": 1
   },
   {
    "fieldname": "earlier_home_club",
    "fieldtype": "Link",
    "label": "Earlier Home Club",
-   "options": "Club"
+   "options": "Club",
+   "set_only_once": 1
   },
   {
    "fieldname": "column_break_14",
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "club_ri_21_22",
-   "fieldtype": "Link",
-   "label": "Your Club for the RI Year 2021-22(Applicable for Club Change)",
-   "options": "Club"
-  },
-  {
    "fieldname": "experience_club",
    "fieldtype": "Text",
    "label": "Rotaract Experience at Club Level",
-   "reqd": 1
+   "reqd": 1,
+   "set_only_once": 1
   },
   {
    "fieldname": "experience_district",
    "fieldtype": "Text",
    "label": "Rotaract Experience at District Level",
-   "reqd": 1
+   "reqd": 1,
+   "set_only_once": 1
   },
   {
    "fieldname": "highlights",
    "fieldtype": "Text",
    "label": "Top 5 Highlights of your Rotaract Career",
-   "reqd": 1
+   "reqd": 1,
+   "set_only_once": 1
   },
   {
    "fieldname": "strengths",
    "fieldtype": "Small Text",
    "label": "My Strengths",
-   "reqd": 1
+   "reqd": 1,
+   "set_only_once": 1
   },
   {
    "fieldname": "weakness",
    "fieldtype": "Small Text",
    "label": "My Weaknesses",
-   "reqd": 1
+   "reqd": 1,
+   "set_only_once": 1
   },
   {
    "fieldname": "application_preference_section",
@@ -211,26 +223,30 @@
    "fieldtype": "Select",
    "label": "Avenue Preference 1",
    "options": "Secretariat\nAdministration\nFinance\nClub Service\nSports\nCommunity Service\nInternational Service\nProfessional Development\nEntrepreneurship Development\nPartners in Service\nHuman Resource Development\nZones\nPublic Relations & marketing\nPublications\nDigital Communications\nSocial Media Management\nWeb Development\nMedia Productions\nRotary-Rotaract Project Committee",
-   "reqd": 1
+   "reqd": 1,
+   "set_only_once": 1
   },
   {
    "fieldname": "designation1",
    "fieldtype": "Select",
    "label": "Which Designation are you applying for",
    "options": "Director\nJoint Director\nZonal Rotaract Representative\nCommittee Member",
-   "reqd": 1
+   "reqd": 1,
+   "set_only_once": 1
   },
   {
    "fieldname": "reason1",
    "fieldtype": "Small Text",
    "label": "Reason for Preference 1",
-   "reqd": 1
+   "reqd": 1,
+   "set_only_once": 1
   },
   {
    "fieldname": "unique_avenue1",
    "fieldtype": "Text",
    "label": "Suggest one UNIQUE initiative that you will take in this avenue-1",
-   "reqd": 1
+   "reqd": 1,
+   "set_only_once": 1
   },
   {
    "fieldname": "column_break_30",
@@ -241,26 +257,30 @@
    "fieldtype": "Select",
    "label": "Avenue Preference 2",
    "options": "Secretariat\nAdministration\nFinance\nClub Service\nSports\nCommunity Service\nInternational Service\nProfessional Development\nEntrepreneurship Development\nPartners in Service\nHuman Resource Development\nZones\nPublic Relations & marketing\nPublications\nDigital Communications\nSocial Media Management\nWeb Development\nMedia Productions\nRotary-Rotaract Project Committee",
-   "reqd": 1
+   "reqd": 1,
+   "set_only_once": 1
   },
   {
    "fieldname": "designation2",
    "fieldtype": "Select",
    "label": "Which Designation are you applying for",
    "options": "Director\nJoint Director\nZonal Rotaract Representative\nCommittee Member",
-   "reqd": 1
+   "reqd": 1,
+   "set_only_once": 1
   },
   {
    "fieldname": "reason2",
    "fieldtype": "Small Text",
    "label": "Reason for Preference 2",
-   "reqd": 1
+   "reqd": 1,
+   "set_only_once": 1
   },
   {
    "fieldname": "unique_avenue2",
    "fieldtype": "Text",
    "label": "Suggest one UNIQUE initiative that you will take in this avenue-2",
-   "reqd": 1
+   "reqd": 1,
+   "set_only_once": 1
   },
   {
    "fieldname": "section_break_35",
@@ -271,14 +291,16 @@
    "fieldtype": "Select",
    "label": "Project 1",
    "options": "District Conference\nDirectors Training Session\nJashn-e-3141\nJeevan Daan\nLearn a New Sport\nModel Indian Parliamentary Session (MIPS)\nR-Catalyst\nRotary Rotaract Entertainment Destination (RED)\nRotaract Initiative for Sporting Excellence\nRotaract - MUN\nRotary Youth Program for Enrichment\nRotaract Ultimate Online Tournament\nSAFAR\nStart Up Meet\nThe Millennial's Summit\nWorld Responsible Youth",
-   "reqd": 1
+   "reqd": 1,
+   "set_only_once": 1
   },
   {
    "fieldname": "project_select2",
    "fieldtype": "Select",
    "label": "Project 2",
    "options": "District Conference\nDirectors Training Session\nJashn-e-3141\nJeevan Daan\nLearn a New Sport\nModel Indian Parliamentary Session (MIPS)\nR-Catalyst\nRotary Rotaract Entertainment Destination (RED)\nRotaract Initiative for Sporting Excellence\nRotaract - MUN\nRotary Youth Program for Enrichment\nRotaract Ultimate Online Tournament\nSAFAR\nStart Up Meet\nThe Millennial's Summit\nWorld Responsible Youth",
-   "reqd": 1
+   "reqd": 1,
+   "set_only_once": 1
   },
   {
    "fieldname": "column_break_35",
@@ -292,24 +314,28 @@
    "fieldname": "inspire_refer",
    "fieldtype": "Data",
    "label": "Who inspired/referred you to apply for the District Council 2022-23",
-   "reqd": 1
+   "reqd": 1,
+   "set_only_once": 1
   },
   {
    "fieldname": "leadership_section",
    "fieldtype": "Section Break",
-   "label": "Leadership"
+   "label": "Leadership",
+   "set_only_once": 1
   },
   {
    "fieldname": "define_rotaract",
    "fieldtype": "Text",
    "label": "Define Rotaract in the most efficient way",
-   "reqd": 1
+   "reqd": 1,
+   "set_only_once": 1
   },
   {
    "fieldname": "expectation",
    "fieldtype": "Text",
    "label": "What do you expect to experience from this opportunity?",
-   "reqd": 1
+   "reqd": 1,
+   "set_only_once": 1
   },
   {
    "fieldname": "column_break_42",
@@ -319,7 +345,8 @@
    "fieldname": "motivation",
    "fieldtype": "Text",
    "label": "What motivates you to be a part of the council?",
-   "reqd": 1
+   "reqd": 1,
+   "set_only_once": 1
   },
   {
    "description": "(This Section is mandatory and ensures that your club President 22-23 is aware and okay with you working on the Council Team)",
@@ -333,33 +360,37 @@
    "fieldname": "noc",
    "fieldtype": "Text",
    "label": "No Objection Certificate",
-   "read_only": 1
+   "read_only": 1,
+   "set_only_once": 1
   },
   {
    "fieldname": "president_name",
    "fieldtype": "Data",
    "label": "Name of the President",
-   "reqd": 1
+   "reqd": 1,
+   "set_only_once": 1
   },
   {
    "fieldname": "president_designation",
    "fieldtype": "Select",
    "label": "Designation",
    "options": "President 2022-23\nPresident 2021-22\nPresident 2020-21",
-   "reqd": 1
+   "reqd": 1,
+   "set_only_once": 1
   },
   {
    "fieldname": "cetify",
    "fieldtype": "Select",
    "label": "I certify that the information shared above is true to my knowledge",
    "options": "Yes\nNo",
-   "reqd": 1
+   "reqd": 1,
+   "set_only_once": 1
   },
   {
+   "depends_on": "eval:doc.club_change != null",
    "fieldname": "attach_noc",
    "fieldtype": "Attach",
-   "label": "Attach No Objection Certificate",
-   "reqd": 1
+   "label": "Attach No Objection Certificate"
   },
   {
    "default": "now",
@@ -401,11 +432,18 @@
    "options": "Council Application",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "club_change",
+   "fieldtype": "Link",
+   "label": "Your Home Club for the RI Year 2022-23(Applicable for Club Change)",
+   "options": "Club",
+   "set_only_once": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2021-12-25 16:43:33.185105",
+ "modified": "2021-12-25 19:19:52.993557",
  "modified_by": "Administrator",
  "module": "Pranali Reloaded",
  "name": "Council Application",
@@ -427,5 +465,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
+ "title_field": "applicant_name",
  "track_changes": 1
 }
