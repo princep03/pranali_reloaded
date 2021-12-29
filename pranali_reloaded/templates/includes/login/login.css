@@ -44,7 +44,7 @@ body {
 .container-new {
   overflow: hidden;
   position: relative;
-  width: 425px;
+  width: 450px;
   height: 550px;
   background: rgb(0, 0, 0);
   box-shadow: 0 25px 50px rgba(255, 0, 0, 0.3), 0 15px 12px rgba(255, 0, 0, 0.22);
@@ -83,6 +83,7 @@ form {
 .login-content h3 {
  color: white;
  text-shadow: 2px 2px 5px red;
+ font-size: 1.6rem;
 }
 
 .login-content h2 {
