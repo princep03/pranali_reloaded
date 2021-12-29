@@ -1,7 +1,7 @@
 /* login-css */
 
 * {
-  padding: 0;
+  padding: 2px 4px 2px 4px;
   margin: 0;
   box-sizing: border-box;
 }
@@ -47,7 +47,7 @@ body {
   width: 425px;
   height: 550px;
   background: rgb(0, 0, 0);
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 25px 50px rgba(255, 0, 0, 0.3), 0 15px 12px rgba(255, 0, 0, 0.22);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 7rem;
